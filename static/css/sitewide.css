@@ -1,5 +1,30 @@
 .column {
-  max-width: var(--width-main);
+  width: var(--width-main);
   margin-left: auto;
   margin-right: auto;
+}
+
+
+/* || HEADER */
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__title {
+  font-weight: normal;
+  text-align: start;
+}
+
+.header__nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
 }
