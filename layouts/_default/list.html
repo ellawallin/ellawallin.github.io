@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+    <main>
+        <section>
+            <!-- sometimes title is provided in md instead -->
+            {{ with .Title }}
+                <h1>{{ . }}</h1>
+            {{ end }}
+
+            {{ .Content }}
+
+            <!-- sections -->
+            {{ with where .Sections "Params.hidden" "!=" true }}
+                {{ partial "list/stack_project" . }}
+            {{ end }}
+
+            <!-- items -->
+            {{ with where .RegularPages "Params.hidden" "!=" true }}
+                {{ partial "list/stack_art" . }}
+            {{ end }}
+        </section>
+    </main>
+
+{{ end }}

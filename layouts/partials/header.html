@@ -1,0 +1,9 @@
+<header>
+    <nav>
+        {{ range .Site.Sections }}
+            {{ if .RegularPages }}
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+        {{ end }}
+    </nav>
+</header>

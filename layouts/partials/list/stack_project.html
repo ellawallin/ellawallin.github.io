@@ -1,0 +1,5 @@
+<div class="stack stack--project">
+    {{ range where . "Params.hidden" "!=" true }}
+        {{ partial "it/item_project" . }}
+    {{ end }}
+</div>

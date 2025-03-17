@@ -1,0 +1,11 @@
+<article class="item item--project">
+    <a href="{{ .RelPermalink }}">
+        <div>
+            {{ with .LinkTitle }}
+                <h3>{{ . }}</h3>
+            {{ else }}
+                <h3>Unnamed</h3>
+            {{ end }}
+        </div>
+    </a>
+</article>
