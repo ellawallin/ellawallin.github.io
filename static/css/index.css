@@ -1,0 +1,36 @@
+@import "general.css";
+@import "typography.css";
+@import "sitewide.css";
+@import "item.css";
+@import "single.css";
+
+:root {
+  /* color */
+
+  --color-bg: #F5F3F0;
+  --color-surface: #FFFFFF;
+
+  --color-text-primary: rgba(0, 0, 0, 0.9);
+  --color-text-secondary: rgba(0, 0, 0, 0.6);
+  --color-text-link: #027DCB;
+
+  /* dimen */
+
+  --spacing-diminutive: 0.25rem; /* 2dp */
+  --spacing-tiny: 0.5rem; /* 4dp */
+  --spacing-small: 1rem; /* 8dp */
+
+  --width-main: 75vw; /* 6/8 */
+
+  /* type */
+
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.6rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 17px;
+  --font-size-caption: 15px;
+
+  /* anim */
+
+  --transition: 0.2s;
+}

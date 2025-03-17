@@ -1,9 +1,15 @@
 <header>
-    <nav>
-        {{ range .Site.Sections }}
-            {{ if .RegularPages }}
-                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    <div class="column">
+        <nav>
+            <a href="/">Ella Wallin</a>
+
+            {{ range .Site.Sections }}
+                {{ if .RegularPages }}
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                {{ end }}
             {{ end }}
-        {{ end }}
-    </nav>
+
+            <a href="/about">About</a>
+        </nav>
+    </div>
 </header>

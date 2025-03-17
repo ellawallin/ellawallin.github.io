@@ -2,6 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/index.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
         {{ if eq .Page.Title "" }}
             <title>{{ .Site.Title }}</title>
@@ -9,6 +14,7 @@
             <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
         {{ end }}
     </head>
+
     <body>
         {{ partial "header" . }}
         {{ block "main" . }}

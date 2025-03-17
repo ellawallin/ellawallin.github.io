@@ -1,0 +1,5 @@
+.column {
+  max-width: var(--width-main);
+  margin-left: auto;
+  margin-right: auto;
+}
