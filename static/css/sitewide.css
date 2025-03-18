@@ -31,3 +31,24 @@
   gap: 1.5rem;
   align-items: center;
 }
+
+.nav-tab {
+  transition: var(--transition);
+  border-radius: var(--corner-radius-large);
+}
+
+.nav-tab:hover,
+.nav-tab--selected {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  padding-left: var(--spacing-tiny);
+  padding-right: var(--spacing-tiny);
+  margin-left: calc(-1 * var(--spacing-tiny));
+  margin-right: calc(-1 * var(--spacing-tiny));
+}
+
+.nav-tab.inverted:hover
+.nav-tab--selected.inverted {
+  background-color: var(--color-bg);
+}
+

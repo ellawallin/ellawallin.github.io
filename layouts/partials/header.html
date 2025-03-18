@@ -6,17 +6,17 @@
 
     <div class="header__content column">
         <div class="header__logo">
-            <a class="{{ $class }}" href="/">Ella Wallin</a>
+            <a class="nav-tab {{ $class }}" href="/">Ella Wallin</a>
         </div>
 
         <nav class="header__nav">
             {{ range .Site.Sections }}
                 {{ if .RegularPages }}
-                    <a class="{{ $class }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                    {{ partial "header_tab" (dict "link" .RelPermalink "text" .LinkTitle "class" $class ) }}
                 {{ end }}
             {{ end }}
 
-            <a class="{{ $class }}" href="/about">About</a>
+            {{ partial "header_tab" (dict "link" "/about" "text" "About" "class" $class ) }}
         </nav>
     </div>
 </header>

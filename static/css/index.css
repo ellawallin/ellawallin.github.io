@@ -24,6 +24,9 @@
   --spacing-tiny: 0.5rem; /* 4dp */
   --spacing-small: 1rem; /* 8dp */
 
+  --corner-radius-small: 0.25rem;
+  --corner-radius-large: 0.6rem;
+
   --width-main: 75vw; /* 6/8 */
   --width-narrow: 50vw; /* 4/8 */
   --height-header: 3rem;
