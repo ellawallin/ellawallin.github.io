@@ -1,8 +1,7 @@
 ---
-thumb:
+title: Ella Wallin
+thumb: gaia-home.png
 ---
-
-# Ella Wallin
 
 ## Illustrator & Concept artist
 

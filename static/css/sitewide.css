@@ -4,21 +4,24 @@
   margin-right: auto;
 }
 
+.column--narrow {
+  width: var(--width-narrow);
+}
+
 
 /* || HEADER */
 
 .header__content {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .header__logo {
   display: flex;
-}
-
-.header__title {
   font-weight: normal;
   text-align: start;
+  align-items: center;
 }
 
 .header__nav {

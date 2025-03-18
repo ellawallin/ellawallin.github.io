@@ -1,8 +1,12 @@
 {{ define "main" }}
 
+    {{ partial "hero" . }}
+
     <main class="column">
         <article>
-            <h1>{{ .Title }}</h1>
+            {{ if not .Params.thumb }}
+                <h1>{{ .Title }}</h1>
+            {{ end }}
 
             {{ .Content }}
         </article>

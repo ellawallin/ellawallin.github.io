@@ -1,0 +1,16 @@
+{{ with .Params.thumb }}
+    <div class="hero">
+        {{ $path := partial "fn/Concat" (slice "images/" .) }}
+        {{ $image := resources.Get $path }}
+
+        {{ with $image }}
+            <img class="hero__img" loading="lazy" src="{{ .RelPermalink }}">
+        {{ else }}
+            {{ fmt.Errorf (partial "fn/Concat" (slice "Single: unable to find " $path)) }}
+        {{ end }}
+
+        <div class="hero__overlay">
+            <h1 class="hero__title inverted">{{ $.Title }}</h1>
+        </div>
+    </div>
+{{ end }}

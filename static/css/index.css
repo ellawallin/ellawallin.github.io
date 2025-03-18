@@ -9,10 +9,14 @@
 
   --color-bg: #F5F3F0;
   --color-surface: #FFFFFF;
+  --color-overlay: rgba(0, 0, 0, 0.3);
 
   --color-text-primary: rgba(0, 0, 0, 0.9);
   --color-text-secondary: rgba(0, 0, 0, 0.6);
   --color-text-link: #027DCB;
+
+  --color-text-primary-inverted: rgba(255, 255, 255, 1);
+  --color-text-secondary-inverted: rgba(255, 255, 255, 0.6);
 
   /* dimen */
 
@@ -21,10 +25,12 @@
   --spacing-small: 1rem; /* 8dp */
 
   --width-main: 75vw; /* 6/8 */
+  --width-narrow: 50vw; /* 4/8 */
+  --height-header: 3rem;
 
   /* type */
 
-  --font-size-h1: 2rem;
+  --font-size-h1: 2.5rem;
   --font-size-h2: 1.6rem;
   --font-size-h3: 1.25rem;
   --font-size-body: 17px;

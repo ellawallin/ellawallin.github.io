@@ -1,10 +1,11 @@
 {{ define "main" }}
 
+    {{ partial "hero" . }}
+
     <main class="column">
         <section>
-            <!-- sometimes title is provided in md instead -->
-            {{ with .Title }}
-                <h1>{{ . }}</h1>
+            {{ if not .Params.thumb }}
+                <h1>{{ .Title }}</h1>
             {{ end }}
 
             {{ .Content }}
