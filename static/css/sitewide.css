@@ -35,6 +35,7 @@
 .nav-tab {
   transition: var(--transition);
   border-radius: var(--corner-radius-large);
+  font-weight: 500;
 }
 
 .nav-tab:hover,

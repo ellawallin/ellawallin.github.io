@@ -26,6 +26,11 @@ header {
 
 /* || TEXT */
 
+p {
+  margin-top: var(--spacing-p);
+  margin-bottom: var(--spacing-p);
+}
+
 p, li {
   font-size: var(--font-size-body);
   color: var(--color-text-primary);
@@ -67,6 +72,10 @@ sup {
 
 
 /* || DECORATION */
+
+li::marker {
+  color: var(--color-text-secondary);
+}
 
 ul > li::marker {
   font-size: smaller;

@@ -1,0 +1,7 @@
+{{ if eq .Type "alert" }}
+    {{ partial "single/callout" (dict "title" .AlertTitle "text" (transform.Plainify .Text)) }}
+{{ else }}
+    <blockquote>
+        {{ .Text }}
+    </blockquote>
+{{ end }}

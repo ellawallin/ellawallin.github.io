@@ -1,3 +1,5 @@
+/* || HERO */
+
 .hero {
   position: relative;
   width: 100vw;
@@ -24,4 +26,27 @@
   margin: 0;
   text-align: center;
   margin-top: var(--height-header);
+}
+
+
+/* || CALLOUT */
+
+.callout {
+  border-radius: var(--corner-radius-large);
+  padding: var(--spacing-small);
+  background-color: var(--color-surface);
+  margin-top: var(--spacing-p);
+  margin-bottom: var(--spacing-p);
+}
+
+.callout__heading {
+  color: var(--color-text-secondary);
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+
+.callout__body {
+  color: var(--color-text-secondary);
+  margin: 0;
 }

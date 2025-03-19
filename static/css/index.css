@@ -23,6 +23,7 @@
   --spacing-diminutive: 0.25rem; /* 2dp */
   --spacing-tiny: 0.5rem; /* 4dp */
   --spacing-small: 1rem; /* 8dp */
+  --spacing-p: 1em;
 
   --corner-radius-small: 0.25rem;
   --corner-radius-large: 0.6rem;
