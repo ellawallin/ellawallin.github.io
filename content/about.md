@@ -2,6 +2,7 @@
 title: About me
 hidden: true
 thumb:
+aliases: [aboutme, about-me, me]
 ---
 
 {{< split columns="1fr 1fr" >}}

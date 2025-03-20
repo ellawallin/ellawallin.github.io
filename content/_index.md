@@ -2,6 +2,7 @@
 title: Ella Wallin
 thumb: gaia-home.png
 thumbsize: 66vh
+aliases: [/home]
 ---
 
 {{% split columns="1fr 2fr" %}}
