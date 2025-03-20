@@ -3,8 +3,12 @@
 .hero {
   position: relative;
   width: 100vw;
-  height: 50vh;
+  height: var(--height-hero);
   margin-top: calc(-1 * var(--height-header));
+}
+
+.hero--large {
+  height: var(--height-hero-large);
 }
 
 .hero__img {
@@ -72,8 +76,8 @@
   /* grid-template-columns: 1fr 1fr; */
   align-items: start;
   gap: var(--spacing-column);
-  margin-top: var(--spacing-p);
-  margin-bottom: var(--spacing-p);
+  margin-top: calc(2 * var(--spacing-p));
+  margin-bottom: calc(2 * var(--spacing-p));
 }
 
 .split > * {

@@ -5,7 +5,7 @@ modified:
 hero: gaia-first.png
 ---
 
-{{% split columns="1fr 2fr" %}}
+{{% split widths="2" %}}
 
 > [!note]
 > Jan – Feb 2025. Final project for VFS Animation Concept Art.
@@ -16,7 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ![](/images/gaia-home.png)
 
-{{% split columns="1fr 2fr" %}}
+{{% split widths="2" %}}
 
 ## Process
 
@@ -29,12 +29,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     {{< figure src="/images/gaia-first.png" >}}
 {{< /split >}}
 
-{{< split columns="2fr 1fr" >}}
+{{< split widths="4" >}}
     {{< figure src="/images/gaia-first.png" >}}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 {{< /split >}}
 
-{{< split columns="1fr 1fr 1fr" >}}
+{{< split widths="2 2" >}}
     {{< figure src="/images/gaia-home.png" >}}
     {{< figure src="/images/gaia-home.png" >}}
     {{< figure src="/images/gaia-home.png" >}}

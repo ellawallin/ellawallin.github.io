@@ -1,11 +1,11 @@
 {{ with .Params.hero }}
-    {{ $style := "" }}
+    {{ $class := "" }}
 
-    {{ with $.Params.herosize }}
-        {{ $style = partial "fn/Concat" (slice "height: " .) }}
+    {{ if $.Params.herolarge }}
+        {{ $class = "hero--large" }}
     {{ end }}
 
-    <div class="hero" style="{{ $style }}">
+    <div class="hero {{ $class }}">
         {{ $path := partial "fn/Concat" (slice "images/" .) }}
         {{ $image := resources.Get $path }}
         {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}

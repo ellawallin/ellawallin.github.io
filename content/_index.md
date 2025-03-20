@@ -1,11 +1,11 @@
 ---
 title: Ella Wallin
 hero: gaia-home.png
-herosize: 66vh
+herolarge: true
 aliases: [/home]
 ---
 
-{{% split columns="1fr 2fr" %}}
+{{% split widths="2" %}}
 
 ## Illustrator &<br>Concept artist
 
