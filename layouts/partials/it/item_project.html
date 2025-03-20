@@ -9,14 +9,14 @@
 
     <a class="item__link" href="{{ .RelPermalink }}">
         {{ with $thumb }}
-            {{ $path := partial "fn/Concat" (slice "images/" .) }}
+            {{ $path := add "images/" . }}
             {{ $image := resources.Get $path }}
             {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 1000) }}
 
             {{ with $resized }}
                 <img class="item__img" loading="lazy" src="{{ .RelPermalink }}">
             {{ else }}
-                {{ errorf (partial "fn/Concat" (slice "Item: unable to find " $path)) }}
+                {{ errorf add "Item: unable to find " $path }}
             {{ end }}
         {{ end }}
 

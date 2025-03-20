@@ -1,9 +1,9 @@
 {{ $sideScaling := "x" }}
 
 {{ if gt .width .height }}
-    {{ $sideScaling = partial "fn/Concat" (slice .length $sideScaling) }}
+    {{ $sideScaling = add .length $sideScaling }}
 {{ else }}
-    {{ $sideScaling = partial "fn/Concat" (slice $sideScaling .length) }}
+    {{ $sideScaling = add $sideScaling .length }}
 {{ end }}
 
 {{ return $sideScaling }}

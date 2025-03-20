@@ -1,7 +1,0 @@
-{{ $acc := "" }}
-
-{{ range . }}
-    {{ $acc = (printf "%s" . | printf "%s%s" $acc | printf "%s") }}
-{{ end }}
-
-{{ return $acc }}

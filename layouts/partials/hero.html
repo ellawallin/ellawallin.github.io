@@ -6,14 +6,14 @@
     {{ end }}
 
     <div class="hero {{ $class }}">
-        {{ $path := partial "fn/Concat" (slice "images/" .) }}
+        {{ $path := add "images/" . }}
         {{ $image := resources.Get $path }}
         {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}
 
         {{ with $resized }}
             <img class="hero__img" loading="lazy" src="{{ .RelPermalink }}">
         {{ else }}
-            {{ errorf (partial "fn/Concat" (slice "Hero: unable to find " $path)) }}
+            {{ errorf add "Hero: unable to find " $path }}
         {{ end }}
 
         <div class="hero__overlay">

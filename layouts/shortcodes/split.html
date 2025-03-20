@@ -8,16 +8,16 @@
     {{ range $widthArr }}
         {{ $width := int . }}
         {{ $widthAcc = add $widthAcc $width }}
-        {{ $gridTemplateColumns = partial "fn/Concat" (slice $gridTemplateColumns " " (string $width) "fr") }}
+        {{ $gridTemplateColumns = add $gridTemplateColumns " " (string $width) "fr" }}
     {{ end }}
 
     <!-- calculate and add implicit widths -->
     {{ if lt $widthAcc 6 }}
         {{ $diff := sub 6 $widthAcc }}
-        {{ $gridTemplateColumns = partial "fn/Concat" (slice $gridTemplateColumns " " (string $diff) "fr") }}
+        {{ $gridTemplateColumns = add $gridTemplateColumns " " (string $diff) "fr" }}
     {{ end }}
 
-    {{ $style = partial "fn/Concat" (slice "grid-template-columns: " $gridTemplateColumns) }}
+    {{ $style = add "grid-template-columns: " $gridTemplateColumns }}
 {{ end }}
 
 <div class="split" style="{{ $style }}">
