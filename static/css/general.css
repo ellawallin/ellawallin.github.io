@@ -46,6 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--font-size-h1);
+  text-align: center;
+  margin-top: 0;
 }
 
 h2 {
@@ -77,7 +79,7 @@ figure {
   margin: 0;
   margin-top: var(--spacing-p);
   margin-bottom: var(--spacing-p);
-  border-radius: var(--corner-radius-large);
+  border-radius: var(--corner-radius);
 }
 
 figure:has(a), figure:has(img) {
@@ -103,7 +105,7 @@ hr {
   border-top: 0.15em solid var(--color-decoration);
   border-radius: 0.075em;
 
-  max-width: var(--width-narrow);
+  max-width: var(--width-column-narrow);
   margin-top: var(--spacing-p);
   margin-bottom: var(--spacing-p);
 }

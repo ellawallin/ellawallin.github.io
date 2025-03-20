@@ -1,0 +1,9 @@
+{{ $style := "" }}
+
+{{ with .Get "columns" }}
+    {{ $style = partial "fn/Concat" (slice "grid-template-columns: " .) }}
+{{ end }}
+
+<div class="split" style="{{ $style }}">
+    {{ .Inner }}
+</div>

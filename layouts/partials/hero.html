@@ -1,6 +1,11 @@
 {{ with .Params.thumb }}
+    {{ $style := "" }}
 
-    <div class="hero">
+    {{ with $.Params.thumbsize }}
+        {{ $style = partial "fn/Concat" (slice "height: " .) }}
+    {{ end }}
+
+    <div class="hero" style="{{ $style }}">
         {{ $path := partial "fn/Concat" (slice "images/" .) }}
         {{ $image := resources.Get $path }}
         {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}

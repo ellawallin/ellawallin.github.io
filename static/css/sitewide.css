@@ -1,11 +1,11 @@
 .column {
-  width: var(--width-main);
+  width: var(--width-column-wide);
   margin-left: auto;
   margin-right: auto;
 }
 
 .column--narrow {
-  width: var(--width-narrow);
+  width: var(--width-column-narrow);
 }
 
 
@@ -34,7 +34,7 @@
 
 .nav-tab {
   transition: var(--transition);
-  border-radius: var(--corner-radius-large);
+  border-radius: var(--corner-radius);
   font-weight: 500;
 }
 

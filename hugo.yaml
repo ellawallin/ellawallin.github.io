@@ -2,3 +2,7 @@ baseURL: https://ellawallin.github.io/
 languageCode: en-us
 title: Ella Wallin
 timeout: 300s
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

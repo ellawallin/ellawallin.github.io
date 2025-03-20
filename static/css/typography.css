@@ -7,8 +7,8 @@
   color: var(--color-text-primary-inverted);
 }
 
-/* article > p {
-  width: var(--width-narrow);
+/*article > p {
+  width: var(--width-column-narrow);
   margin-left: auto;
   margin-right: auto;
-} */
+}*/
