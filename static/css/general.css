@@ -90,9 +90,20 @@ figure:has(a), figure:has(img) {
 /* || DECORATION */
 
 li::marker {
-  color: var(--color-text-secondary);
+  color: var(--color-decoration);
 }
 
 ul > li::marker {
   font-size: smaller;
+}
+
+hr {
+  box-sizing: border-box;
+  border: 0 none transparent;
+  border-top: 0.15em solid var(--color-decoration);
+  border-radius: 0.075em;
+
+  max-width: var(--width-narrow);
+  margin-top: var(--spacing-p);
+  margin-bottom: var(--spacing-p);
 }

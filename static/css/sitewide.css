@@ -53,3 +53,9 @@
   background-color: var(--color-bg);
 }
 
+
+/* || FOOTER */
+
+.footer__text {
+  color: var(--color-text-secondary);
+}
