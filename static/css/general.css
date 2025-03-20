@@ -16,6 +16,7 @@ body {
 main {
   flex: 1;
   padding: var(--spacing-small);
+  padding-top: 0;
 }
 
 header {
@@ -38,8 +39,8 @@ p, li {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  margin-top: 1.25em;
-  margin-bottom: 0.65em;
+  margin-top: var(--spacing-section);
+  margin-bottom: var(--spacing-section);
   color: var(--color-text-primary);
   font-weight: bold;
 }
@@ -47,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: var(--font-size-h1);
   text-align: center;
-  margin-top: 0;
+  margin-top: var(--spacing-p);
 }
 
 h2 {

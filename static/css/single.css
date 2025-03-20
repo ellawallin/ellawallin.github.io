@@ -76,8 +76,8 @@
   /* grid-template-columns: 1fr 1fr; */
   align-items: start;
   gap: var(--spacing-column);
-  margin-top: calc(2 * var(--spacing-p));
-  margin-bottom: calc(2 * var(--spacing-p));
+  margin-top: var(--spacing-section);
+  margin-bottom: var(--spacing-section);
 }
 
 .split > * {

@@ -26,7 +26,8 @@
   --spacing-tiny: 0.5rem; /* 4dp */
   --spacing-small: 1rem; /* 8dp */
 
-  --spacing-p: 1em;
+  --spacing-p: 1rem;
+  --spacing-section: 2rem;
   --spacing-column: var(--spacing-small);
   --spacing-stack: var(--spacing-tiny);
 
