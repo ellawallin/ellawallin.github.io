@@ -71,6 +71,22 @@ sup {
 }
 
 
+/* || MEDIA */
+
+figure {
+  margin: 0;
+  margin-top: var(--spacing-p);
+  margin-bottom: var(--spacing-p);
+  border-radius: var(--corner-radius-large);
+}
+
+figure:has(a), figure:has(img) {
+  width: auto;
+  height: 100%;
+  display: grid; /* for some reason needed to avoid empty space below img */
+}
+
+
 /* || DECORATION */
 
 li::marker {

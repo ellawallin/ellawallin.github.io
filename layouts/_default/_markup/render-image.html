@@ -1,0 +1,13 @@
+{{ with resources.Get .Destination }}
+    {{ $thumb := partial "fn/ResizeSmart" (dict "image" . "length" 1500) }}
+
+    <figure>
+        {{ partial "single/image_figure" (dict "src" $thumb.RelPermalink "title" $.Title ) }}
+
+        {{ with $.Text }}
+            <figcaption>
+                <p class="caption">{{ safe.HTML . }}</p>
+            </figcaption>
+        {{ end }}
+    </figure>
+{{ end }}

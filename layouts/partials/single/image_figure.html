@@ -1,0 +1,13 @@
+<img
+    class="figure__img{{ if .outline }} outlined{{ end }}"
+    loading="lazy"
+    src="{{ .src }}"
+
+    {{ with .alt }}
+        alt="{{ . }}"
+    {{ end }}
+
+    {{ with .title }}
+        title="{{ . }}"
+    {{ end }}
+/>

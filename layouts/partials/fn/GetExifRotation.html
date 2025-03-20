@@ -1,0 +1,15 @@
+{{ $rotation := "" }}
+
+{{ with . }}
+    {{ $orientation := .Tags.Orientation }}
+
+    {{ if eq $orientation 8 }}
+        {{ $rotation = " r90" }}
+    {{ else if eq $orientation 3 }}
+        {{ $rotation = " r180" }}
+    {{ else if eq $orientation 6 }}
+        {{ $rotation = " r270" }}
+    {{ end }}
+{{ end }}
+
+{{ return $rotation }}

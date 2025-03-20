@@ -1,10 +1,12 @@
 {{ with .Params.thumb }}
+
     <div class="hero">
         {{ $path := partial "fn/Concat" (slice "images/" .) }}
         {{ $image := resources.Get $path }}
+        {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}
 
         {{ with $image }}
-            <img class="hero__img" loading="lazy" src="{{ .RelPermalink }}">
+            <img class="hero__img" loading="lazy" src="{{ $resized.RelPermalink }}">
         {{ else }}
             {{ fmt.Errorf (partial "fn/Concat" (slice "Single: unable to find " $path)) }}
         {{ end }}

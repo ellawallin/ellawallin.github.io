@@ -50,3 +50,13 @@
   color: var(--color-text-secondary);
   margin: 0;
 }
+
+
+/* || FIGURE */
+
+.figure__img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+  border-radius: var(--corner-radius-large);
+}
