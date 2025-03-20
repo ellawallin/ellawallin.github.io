@@ -1,1 +1,1 @@
-{{ partial "single/callout" (dict "title" (.Get "title") "text" (transform.Markdownify (.Get "text"))) }}
+{{ partial "single/callout" (dict "title" (.Get "title") "text" (markdownify (.Get "text"))) }}

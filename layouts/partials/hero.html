@@ -13,7 +13,7 @@
         {{ with $resized }}
             <img class="hero__img" loading="lazy" src="{{ .RelPermalink }}">
         {{ else }}
-            {{ fmt.Errorf (partial "fn/Concat" (slice "Hero: unable to find " $path)) }}
+            {{ errorf (partial "fn/Concat" (slice "Hero: unable to find " $path)) }}
         {{ end }}
 
         <div class="hero__overlay">

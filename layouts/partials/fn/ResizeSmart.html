@@ -1,7 +1,7 @@
 {{ $resized := .image }}
 
-{{ if compare.Gt (math.Max .image.Width .image.Height) .length }}
-    {{ $scaling := partial "fn/GetSideScaling" (dict "width" .image.Width "height" .image.Height "length" (cast.ToString .length)) }}
+{{ if gt (math.Max .image.Width .image.Height) .length }}
+    {{ $scaling := partial "fn/GetSideScaling" (dict "width" .image.Width "height" .image.Height "length" (string .length)) }}
     {{ $rot := partial "fn/GetExifRotation" .image.Exif }}
     {{ $spec := partial "fn/Concat" (slice $scaling " webp" $rot) }}
 

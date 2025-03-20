@@ -16,7 +16,7 @@
             {{ with $resized }}
                 <img class="item__img" loading="lazy" src="{{ .RelPermalink }}">
             {{ else }}
-                {{ fmt.Errorf (partial "fn/Concat" (slice "Item: unable to find " $path)) }}
+                {{ errorf (partial "fn/Concat" (slice "Item: unable to find " $path)) }}
             {{ end }}
         {{ end }}
 

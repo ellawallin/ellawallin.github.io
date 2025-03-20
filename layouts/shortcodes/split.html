@@ -1,7 +1,7 @@
 {{ $style := "" }}
 
 {{ with .Get "widths" }}
-    {{ $widthArr := strings.Split . " " }}
+    {{ $widthArr := split . " " }}
     {{ $widthAcc := 0 }}
     {{ $gridTemplateColumns := "" }}
 
