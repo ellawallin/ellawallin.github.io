@@ -1,7 +1,7 @@
 ---
 title: About me
 hidden: true
-thumb:
+hero:
 aliases: [aboutme, about-me, me]
 ---
 

@@ -2,7 +2,7 @@
 title: Gaia
 published:
 modified:
-thumb: gaia-first.png
+hero: gaia-first.png
 ---
 
 {{% split columns="1fr 2fr" %}}

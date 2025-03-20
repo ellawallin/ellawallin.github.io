@@ -1,7 +1,7 @@
 ---
 title: Ella Wallin
-thumb: gaia-home.png
-thumbsize: 66vh
+hero: gaia-home.png
+herosize: 66vh
 aliases: [/home]
 ---
 

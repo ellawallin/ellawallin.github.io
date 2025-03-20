@@ -1,7 +1,7 @@
-{{ with .Params.thumb }}
+{{ with .Params.hero }}
     {{ $style := "" }}
 
-    {{ with $.Params.thumbsize }}
+    {{ with $.Params.herosize }}
         {{ $style = partial "fn/Concat" (slice "height: " .) }}
     {{ end }}
 

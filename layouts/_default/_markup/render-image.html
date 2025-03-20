@@ -1,8 +1,8 @@
 {{ with resources.Get .Destination }}
-    {{ $thumb := partial "fn/ResizeSmart" (dict "image" . "length" 1500) }}
+    {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1500) }}
 
     <figure>
-        {{ partial "single/image_figure" (dict "src" $thumb.RelPermalink "title" $.Title ) }}
+        {{ partial "single/image_figure" (dict "src" $resized.RelPermalink "title" $.Title ) }}
 
         {{ with $.Text }}
             <figcaption>

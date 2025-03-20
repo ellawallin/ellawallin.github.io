@@ -2,7 +2,7 @@
 title: Hej
 published:
 modified:
-thumb:
+hero:
 ---
 
 Hejhej
