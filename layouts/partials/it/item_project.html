@@ -1,10 +1,28 @@
 <article class="item item--project">
-    <a href="{{ .RelPermalink }}">
-        <div>
-            {{ with .LinkTitle }}
-                <h3>{{ . }}</h3>
+    {{ $thumb := "" }}
+
+    {{ with .Params.hero }}
+        {{ $thumb = . }}
+    {{ else with index .RegularPages 0 }}
+        {{ $thumb = .Params.hero }}
+    {{ end }}
+
+    <a class="item__link" href="{{ .RelPermalink }}">
+        {{ with $thumb }}
+            {{ $path := partial "fn/Concat" (slice "images/" .) }}
+            {{ $image := resources.Get $path }}
+            {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 1000) }}
+
+            {{ with $resized }}
+                <img class="item__img" loading="lazy" src="{{ .RelPermalink }}">
             {{ else }}
-                <h3>Unnamed</h3>
+                {{ fmt.Errorf (partial "fn/Concat" (slice "Item: unable to find " $path)) }}
+            {{ end }}
+        {{ end }}
+
+        <div class="item__overlay">
+            {{ with .LinkTitle }}
+                <h3 class="item__title">{{ . }}</h3>
             {{ end }}
         </div>
     </a>

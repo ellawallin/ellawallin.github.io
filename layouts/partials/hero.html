@@ -10,10 +10,10 @@
         {{ $image := resources.Get $path }}
         {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}
 
-        {{ with $image }}
-            <img class="hero__img" loading="lazy" src="{{ $resized.RelPermalink }}">
+        {{ with $resized }}
+            <img class="hero__img" loading="lazy" src="{{ .RelPermalink }}">
         {{ else }}
-            {{ fmt.Errorf (partial "fn/Concat" (slice "Single: unable to find " $path)) }}
+            {{ fmt.Errorf (partial "fn/Concat" (slice "Hero: unable to find " $path)) }}
         {{ end }}
 
         <div class="hero__overlay">
