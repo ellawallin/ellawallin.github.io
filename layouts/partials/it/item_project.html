@@ -1,4 +1,10 @@
-<article class="item item--project">
+{{ $style := "" }}
+
+{{ with .Params.width }}
+    {{ $style = add "grid-column: span " (string .)}}
+{{ end }}
+
+<article class="item item--project" style="{{ $style }}">
     {{ $thumb := "" }}
 
     {{ with .Params.hero }}

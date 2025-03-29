@@ -8,7 +8,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.stack--project {}
+.stack--project {
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(6, minmax(0, 4fr));
+}
 
 
 /* || ITEM */
@@ -19,6 +22,7 @@
 
 .item--project {
   height: 6rem;
+  grid-column: span 3;
 }
 
 .item__link {
