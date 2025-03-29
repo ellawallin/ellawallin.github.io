@@ -11,7 +11,7 @@
         {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}
 
         {{ with $resized }}
-            <img class="hero__img" loading="lazy" src="{{ .RelPermalink }}">
+            <img class="hero__img fadeload" loading="lazy" onload="this.style.opacity=1" src="{{ .RelPermalink }}">
         {{ else }}
             {{ errorf add "Hero: unable to find " $path }}
         {{ end }}
