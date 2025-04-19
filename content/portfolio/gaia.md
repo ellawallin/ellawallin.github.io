@@ -2,7 +2,7 @@
 title: Gaia
 published:
 modified:
-hero: gaia-first.png
+hero: gaia-build-home.png
 ---
 
 {{% split widths="2" %}}
@@ -14,30 +14,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {{% /split %}}
 
-![](/images/gaia-home.png)
+![](/images/gaia-keyart-waters.png)
 
-{{% split widths="2" %}}
+![](/images/gaia-keyart-city.png)
 
-## Process
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-{{% /split %}}
+![](/images/gaia-build-home.png)
 
 {{< split >}}
-    {{< figure src="/images/gaia-home.png" >}}
-    {{< figure src="/images/gaia-first.png" >}}
+    {{< figure src="/images/gaia-char-poses.png" >}}
+    {{< figure src="/images/gaia-char-turnaround.png" >}}
 {{< /split >}}
 
-{{< split widths="4" >}}
-    {{< figure src="/images/gaia-first.png" >}}
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+![](/images/gaia-char-kotlin.png)
+
+![](/images/gaia-env-waters.png)
+
+![](/images/gaia-plants.png)
+
+{{< split >}}
+    {{< figure src="/images/gaia-props.png" >}}
+    {{< figure src="/images/gaia-prop-bag.png" >}}
 {{< /split >}}
 
-{{< split widths="2 2" >}}
-    {{< figure src="/images/gaia-home.png" >}}
-    {{< figure src="/images/gaia-home.png" >}}
-    {{< figure src="/images/gaia-home.png" >}}
-{{< /split >}}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+![](/images/gaia-thumb.png)
