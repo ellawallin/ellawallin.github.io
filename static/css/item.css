@@ -13,6 +13,16 @@
   grid-template-columns: repeat(6, minmax(0, 4fr));
 }
 
+@media screen and (max-width: 42rem) {
+  .stack--project {
+    grid-template-columns: auto !important;
+  }
+
+  .item--project {
+    grid-column: initial !important;
+  }
+}
+
 
 /* || ITEM */
 
@@ -21,7 +31,7 @@
 }
 
 .item--project {
-  height: 6rem;
+  height: var(--height-item-project);
   grid-column: span 3;
 }
 

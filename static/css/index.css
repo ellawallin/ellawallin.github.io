@@ -36,10 +36,12 @@
   --width-column-wide: 75rem; /* 6/8 */
   --width-column-narrow: 50rem; /* 4/8 */
   --width-column-1: 12.5rem; /* 1/8 */
+  --width-mobile: 42rem;
 
   --height-header: 4rem;
   --height-hero: 50vh;
   --height-hero-large: 75vh;
+  --height-item-project: 6rem;
 
   /* type */
 
