@@ -10,11 +10,11 @@
 
   --color-bg: #F5F3F0;
   --color-surface: #FFFFFF;
-  --color-overlay: rgba(0, 0, 0, 0.3);
+  --color-overlay: rgba(0, 0, 0, 0.35);
   --color-decoration: rgba(0, 0, 0, 0.1);
 
-  --color-text-primary: rgba(0, 0, 0, 0.8);
-  --color-text-secondary: rgba(0, 0, 0, 0.55);
+  --color-text-primary: rgba(0, 0, 0, 0.85);
+  --color-text-secondary: rgba(0, 0, 0, 0.6);
   --color-text-link: #027DCB;
 
   --color-text-primary-inverted: rgba(255, 255, 255, 1);
@@ -41,13 +41,15 @@
   --height-header: 4rem;
   --height-hero: 50vh;
   --height-hero-large: 75vh;
-  --height-item-project: 6rem;
+  --height-item-project: 8rem;
 
   /* type */
 
+  --font-size-logo: 3.5rem;
+  --font-size-hero: 3rem;
   --font-size-h1: 2.5rem;
-  --font-size-h2: 1.75rem;
-  --font-size-h3: 1.5rem;
+  --font-size-h2: 1.8rem;
+  --font-size-h3: 1.6rem;
   --font-size-body: 17px;
   --font-size-caption: 15px;
 

@@ -28,9 +28,14 @@
 }
 
 .hero__title {
-  margin-top: var(--height-header);
+  margin-top: calc(0.5 * var(--height-header));
   margin-bottom: 0;
   text-align: center;
+  font-size: var(--font-size-hero);
+}
+
+.hero--large .hero__title {
+  font-size: var(--font-size-logo);
 }
 
 

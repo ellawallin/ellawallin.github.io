@@ -30,5 +30,3 @@ hero: gaia-build-home.png
     {{< figure src="/images/gaia-props.png" >}}
     {{< figure src="/images/gaia-prop-bag.png" >}}
 {{< /split >}}
-
-![](/images/gaia-thumb.png)
