@@ -8,6 +8,21 @@
                 <h1>{{ .Title }}</h1>
             {{ end }}
 
+            {{ if or .Params.info .Params.completed }}
+                <div class="split" style="grid-template-columns: 2fr 4fr">
+                    {{ $calloutText := markdownify .Params.info }}
+                    {{ $duration := partial "fn/GetProjectDuration" (dict "start" .Params.started "end" .Params.completed) }}
+
+                    {{ with $duration }}
+                        {{ $calloutText = add . ". " $calloutText }}
+                    {{ end }}
+
+                    {{ partial "single/callout" (dict "text" $calloutText)}}
+
+                    <p>{{ .Params.summary }}</p>
+                </div>
+            {{ end }}
+
             {{ .Content }}
         </article>
     </main>

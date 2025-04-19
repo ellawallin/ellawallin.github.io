@@ -1,0 +1,47 @@
+{{ $formatInterYear := "Jan 2006" }}
+{{ $formatSameYear := "Jan" }}
+
+{{ $s := "" }}
+
+{{ with .start }}
+    {{ $startYear := . | time.Format "2006" }}
+    {{ $startTime := . | time.Format $formatInterYear }}
+
+    <!-- completed -->
+    {{ with $.end }}
+        {{ $endYear := . | time.Format "2006" }}
+        {{ $endTime := . | time.Format $formatInterYear }}
+
+        <!-- same month -->
+        {{ if eq $startTime $endTime }}
+            {{ $s = $startTime }}
+
+        {{ else }}
+            <!-- same year, different months -->
+            {{ if eq $startYear $endYear }}
+                {{ $startTime = $.start | time.Format $formatSameYear }}
+
+            <!-- different years -->
+            {{ else }}
+                <!-- for some reason doesn't work for future dates -->
+                {{ $startTime = $.start | time.Format $formatInterYear }}
+            {{ end }}
+
+            {{ $s = delimit (slice $startTime $endTime) " – " }}
+        {{ end }}
+
+    <!-- ongoing -->
+    {{ else }}
+        {{ $s = delimit (slice $startTime "Ongoing") " – " }}
+    {{ end }}
+
+<!-- no start date -->
+{{ else }}
+    {{ with .end }}
+        {{ $endTime := . | time.Format $formatInterYear }}
+        {{ $s = $endTime }}
+        {{ fmt.Warnf (partial "fn/Concat" (slice "Project end without start")) }}
+    {{ end }}
+{{ end }}
+
+{{ return $s }}
