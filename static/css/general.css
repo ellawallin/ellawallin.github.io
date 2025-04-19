@@ -15,8 +15,8 @@ body {
 
 main {
   flex: 1;
-  padding: var(--spacing-small);
-  padding-top: 0;
+  padding: 0;
+  padding-bottom: var(--spacing-small);
 }
 
 header {

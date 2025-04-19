@@ -4,6 +4,7 @@
   position: relative;
   width: 100vw;
   height: var(--height-hero);
+  min-height: 16rem;
   margin-top: calc(-1 * var(--height-header));
 }
 
@@ -29,8 +30,6 @@
 .hero__title {
   margin-top: var(--height-header);
   margin-bottom: 0;
-  margin-left: var(--width-column-1);
-  margin-right: var(--width-column-1);
   text-align: center;
 }
 

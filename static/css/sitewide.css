@@ -1,7 +1,10 @@
 .column {
   width: var(--width-column-wide);
+  max-width: calc(100% - 2 * var(--spacing-small));
   margin-left: auto;
   margin-right: auto;
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
 }
 
 .column--narrow {
