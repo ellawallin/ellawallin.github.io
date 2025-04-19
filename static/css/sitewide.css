@@ -42,6 +42,7 @@
 }
 
 .nav-tab:hover,
+.nav-tab:active,
 .nav-tab--selected {
   color: var(--color-text-primary);
   background-color: var(--color-surface);
@@ -51,7 +52,8 @@
   margin-right: calc(-1 * var(--spacing-tiny));
 }
 
-.nav-tab.inverted:hover
+.nav-tab.inverted:hover,
+.nav-tab.inverted:active,
 .nav-tab--selected.inverted {
   background-color: var(--color-bg);
 }
