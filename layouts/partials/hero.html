@@ -1,11 +1,13 @@
 {{ with .Params.hero }}
-    {{ $class := "" }}
+    {{ $classHero := "" }}
+    {{ $classTitle := "" }}
 
     {{ if $.Params.herolarge }}
-        {{ $class = "hero--large" }}
+        {{ $classHero = "hero--large" }}
+        {{ $classTitle = "hero__title--logo" }}
     {{ end }}
 
-    <div class="hero {{ $class }}">
+    <div class="hero {{ $classHero }}">
         {{ $path := add "images/" . }}
         {{ $image := resources.Get $path }}
         {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}
@@ -17,7 +19,7 @@
         {{ end }}
 
         <div class="hero__overlay">
-            <h1 class="hero__title inverted column">{{ $.Title }}</h1>
+            <h1 class="hero__title {{ $classTitle }} inverted column">{{ $.Title }}</h1>
         </div>
     </div>
 {{ end }}

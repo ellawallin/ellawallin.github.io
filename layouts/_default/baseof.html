@@ -4,10 +4,15 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/index.css">
 
+        <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
+        <!-- adobe fonts -->
+        <link rel="stylesheet" href="https://use.typekit.net/bgh2bfy.css">
+
+        <!-- title -->
         {{ if eq .Page.Title .Site.Title }}
             <title>{{ .Site.Title }}</title>
         {{ else }}
