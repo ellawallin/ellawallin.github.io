@@ -33,9 +33,9 @@
 
   --corner-radius: 0.6rem;
 
-  --width-column-wide: 75rem; /* 6/8 */
-  --width-column-narrow: 50rem; /* 4/8 */
-  --width-column-1: 12.5rem; /* 1/8 */
+  --width-column-wide: 64rem;
+  --width-column-narrow: calc(var(--width-column-wide) * 2/3); /* 4/6 */
+  --width-column-1: calc(var(--width-column-wide / 6)); /* 1/6 */
   --width-mobile: 42rem;
 
   --height-header: 4rem;
