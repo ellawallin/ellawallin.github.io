@@ -8,14 +8,13 @@
     {{ end }}
 
     <div class="hero {{ $classHero }}">
-        {{ $path := add "images/" . }}
-        {{ $image := resources.Get $path }}
-        {{ $resized := partial "fn/ResizeSmart" (dict "image" $image "length" 2000) }}
+        {{ $image := resources.Get . }}
 
-        {{ with $resized }}
-            <img class="hero__img fadeload" loading="lazy" onload="this.style.opacity=1" src="{{ .RelPermalink }}">
+        {{ with $image }}
+            {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
+            <img class="hero__img fadeload" loading="lazy" onload="this.style.opacity=1" src="{{ $resized.RelPermalink }}">
         {{ else }}
-            {{ errorf add "Hero: unable to find " $path }}
+            {{ errorf (add "Hero: unable to find " .) }}
         {{ end }}
 
         <div class="hero__overlay">

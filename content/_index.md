@@ -1,6 +1,6 @@
 ---
 title: Ella Wallin
-hero: gaia-keyart-waters-full.png
+hero: images/gaia-keyart-waters-full.png
 herolarge: true
 aliases: [/home]
 ---

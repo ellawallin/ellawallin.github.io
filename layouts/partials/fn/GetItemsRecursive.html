@@ -1,0 +1,22 @@
+{{ $projects := (slice) }}
+{{ $arts := (slice) }}
+
+{{ range where .Sections "Params.hidden" "!=" true }}
+    {{ if .Params.embed }}
+        {{ $projectsAndArts := partial "fn/GetItemsRecursive" . }}
+        {{ $projects = $projects | append (index $projectsAndArts 0) }}
+        {{ $arts = $arts | append (index $projectsAndArts 1) }}
+    {{ else }}
+        {{ $projects = $projects | append . }}
+    {{ end }}
+{{ end }}
+
+{{ range where .RegularPages "Params.hidden" "!=" true }}
+    {{ if .Params.project }}
+        {{ $projects = $projects | append . }}
+    {{ else }}
+        {{ $arts = $arts | append . }}
+    {{ end }}
+{{ end }}
+
+{{ return (slice $projects $arts)}}

@@ -6,7 +6,8 @@ started: 2025-01-01
 completed: 2025-02-01
 published:
 modified:
-hero: alice-keyart.png
+hero: images/alice-keyart.png
+project: true
 ---
 
 ![](/images/alice-keyart-mushrooms.png)

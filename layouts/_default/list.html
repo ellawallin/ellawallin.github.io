@@ -10,13 +10,19 @@
 
             {{ .Content }}
 
-            <!-- sections -->
-            {{ with where .Sections "Params.hidden" "!=" true }}
+            {{ $projectsAndArts := partial "fn/GetItemsRecursive" . }}
+
+            <!-- sections and projects -->
+            {{ with index $projectsAndArts 0 }}
                 {{ partial "list/stack_project" . }}
             {{ end }}
 
-            <!-- items -->
-            {{ with where .RegularPages "Params.hidden" "!=" true }}
+            {{ if and (index $projectsAndArts 0) (index $projectsAndArts 1) }}
+                <hr>
+            {{ end }}
+
+            <!-- arts -->
+            {{ with index $projectsAndArts 1 }}
                 {{ partial "list/stack_project" . }}
             {{ end }}
         </section>

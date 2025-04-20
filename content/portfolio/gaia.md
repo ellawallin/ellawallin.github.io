@@ -6,7 +6,8 @@ started: 2025-01-01
 completed: 2025-02-01
 published:
 modified:
-hero: gaia-build-home.png
+hero: images/gaia-build-home.png
+project: true
 ---
 
 ![](/images/gaia-keyart-waters.png)
