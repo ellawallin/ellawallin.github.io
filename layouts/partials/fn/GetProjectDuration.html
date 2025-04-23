@@ -2,15 +2,25 @@
 {{ $formatSameYear := "Jan" }}
 
 {{ $s := "" }}
+{{ $start := .start }}
+{{ $end := .end }}
 
-{{ with .start }}
+<!-- add day if missing -->
+{{ if and $start (eq (len $start) 7) }}
+    {{ $start = add $start "-01" }}
+{{ end }}
+{{ if and $end (eq (len $end) 7) }}
+    {{ $end = add $end "-01" }}
+{{ end }}
+
+{{ with $start }}
     {{ $startYear := . | time.Format "2006" }}
     {{ $startTime := . | time.Format $formatInterYear }}
 
     <!-- completed -->
-    {{ with $.end }}
-        {{ $endYear := . | time.Format "2006" }}
-        {{ $endTime := . | time.Format $formatInterYear }}
+    {{ if $end }}
+        {{ $endYear := $end | time.Format "2006" }}
+        {{ $endTime := $end | time.Format $formatInterYear }}
 
         <!-- same month -->
         {{ if eq $startTime $endTime }}
@@ -19,12 +29,12 @@
         {{ else }}
             <!-- same year, different months -->
             {{ if eq $startYear $endYear }}
-                {{ $startTime = $.start | time.Format $formatSameYear }}
+                {{ $startTime = . | time.Format $formatSameYear }}
 
             <!-- different years -->
             {{ else }}
                 <!-- for some reason doesn't work for future dates -->
-                {{ $startTime = $.start | time.Format $formatInterYear }}
+                {{ $startTime = . | time.Format $formatInterYear }}
             {{ end }}
 
             {{ $s = delimit (slice $startTime $endTime) " – " }}
@@ -37,10 +47,10 @@
 
 <!-- no start date -->
 {{ else }}
-    {{ with .end }}
+    {{ with $end }}
         {{ $endTime := . | time.Format $formatInterYear }}
         {{ $s = $endTime }}
-        {{ fmt.Warnf (partial "fn/Concat" (slice "Project end without start")) }}
+        {{ warnf "Project end without start" }}
     {{ end }}
 {{ end }}
 
