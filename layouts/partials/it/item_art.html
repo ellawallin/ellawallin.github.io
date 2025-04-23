@@ -1,11 +1,22 @@
 <article class="item item--art">
-    <a href="{{ .RelPermalink }}">
-        <div>
-            {{ with .LinkTitle }}
-                <h3>{{ . }}</h3>
+    {{ $thumb := "" }}
+
+    {{ with .Params.hero }}
+        {{ $thumb = . }}
+    {{ else }}
+        {{ warnf (add "Item: " .Params.title " has no hero" ) }}
+    {{ end }}
+
+    <a class="item__link" href="{{ .RelPermalink }}">
+        {{ with $thumb }}
+            {{ $image := resources.Get . }}
+
+            {{ with $image }}
+                {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
+                <img class="item__img" loading="lazy" src="{{ $resized.RelPermalink }}">
             {{ else }}
-                <h3>Unnamed</h3>
+                {{ errorf (add "Item: unable to find " .) }}
             {{ end }}
-        </div>
+        {{ end }}
     </a>
 </article>

@@ -11,19 +11,21 @@
             {{ .Content }}
 
             {{ $projectsAndArts := partial "fn/GetItemsRecursive" . }}
+            {{ $projects := index $projectsAndArts 0 }}
+            {{ $arts := index $projectsAndArts 1 }}
 
             <!-- sections and projects -->
-            {{ with index $projectsAndArts 0 }}
+            {{ with $projects }}
                 {{ partial "list/stack_project" . }}
             {{ end }}
 
-            {{ if and (index $projectsAndArts 0) (index $projectsAndArts 1) }}
+            {{ if and $projects $arts }}
                 <hr>
             {{ end }}
 
             <!-- arts -->
-            {{ with index $projectsAndArts 1 }}
-                {{ partial "list/stack_project" . }}
+            {{ with $arts }}
+                {{ partial "list/stack_art" . }}
             {{ end }}
         </section>
     </main>

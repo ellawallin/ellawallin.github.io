@@ -13,9 +13,18 @@
   grid-template-columns: repeat(6, minmax(0, 4fr));
 }
 
+.stack--art {
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media screen and (max-width: 42rem) {
   .stack--project {
     grid-template-columns: auto !important;
+  }
+
+  .stack--art {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .item--project {
@@ -33,6 +42,10 @@
 .item--project {
   height: var(--height-item-project);
   grid-column: span 3;
+}
+
+.item--art {
+  height: var(--height-item-project);
 }
 
 .item__link {
