@@ -6,7 +6,7 @@ started: 2024-10
 completed: 2025-02
 published:
 modified:
-hero: images/gaia-build-home.png
+hero: images/gaia-plants.png
 project: true
 ---
 

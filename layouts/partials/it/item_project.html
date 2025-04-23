@@ -13,13 +13,13 @@
         {{ $thumb = .Params.hero }}
     {{ end }}
 
-    <a class="item__link" href="{{ .RelPermalink }}">
+    <a class="item__link item--project__link" href="{{ .RelPermalink }}">
         {{ with $thumb }}
             {{ $image := resources.Get . }}
 
             {{ with $image }}
                 {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
-                <img class="item__img" loading="lazy" src="{{ $resized.RelPermalink }}">
+                <img class="item__img item--project__img" loading="lazy" src="{{ $resized.RelPermalink }}">
             {{ else }}
                 {{ errorf (add "Item: unable to find " .) }}
             {{ end }}

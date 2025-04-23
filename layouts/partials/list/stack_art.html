@@ -1,4 +1,7 @@
 <div class="stack stack--art">
+    <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div>
+
     {{ range where . "Params.hidden" "!=" true }}
         {{ partial "it/item_art" . }}
     {{ end }}
