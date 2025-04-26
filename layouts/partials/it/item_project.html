@@ -7,9 +7,11 @@
 <article class="item item--project" style="{{ $style }}">
     {{ $thumb := "" }}
 
-    {{ with .Params.hero }}
+    {{ with .Params.thumb }}
         {{ $thumb = . }}
-    {{ else with index .RegularPages 0 }}
+    {{ else with .Params.hero }}
+        {{ $thumb = . }}
+    {{ else with index .RegularPagesRecursive 0 }}
         {{ $thumb = .Params.hero }}
     {{ end }}
 
