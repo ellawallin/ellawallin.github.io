@@ -9,6 +9,6 @@ aliases: [/home]
 
 ## Illustrator & Concept Artist
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Hi, I’m Ella Wallin, a Swedish concept artist with a love for nature. I specialize in environments, and I love creating spaces that feel alive, emotional and a little bit magical.
 
 {{% /split %}}

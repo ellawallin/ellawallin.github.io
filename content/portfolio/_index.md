@@ -4,5 +4,5 @@ weight: 1
 width: 4
 aliases: []
 embed: false
-thumb: images/gaia-build-home.png
+hero: images/gaia-env-waters.png
 ---
