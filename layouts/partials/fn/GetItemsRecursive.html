@@ -6,7 +6,7 @@
         {{ $projectsAndArts := partial "fn/GetItemsRecursive" . }}
         {{ $projects = $projects | append (index $projectsAndArts 0) }}
         {{ $arts = $arts | append (index $projectsAndArts 1) }}
-    {{ else }}
+    {{ else if .RegularPagesRecursive }}
         {{ $projects = $projects | append . }}
     {{ end }}
 {{ end }}
