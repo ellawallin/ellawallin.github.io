@@ -6,6 +6,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+frontmatter:
+  date:
+    - completed
+    - started
+    - :default
 caches:
   images:
     dir: :cacheDir/images

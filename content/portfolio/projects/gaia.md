@@ -2,8 +2,8 @@
 title: Gaia
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 info: Final project for VFS Animation Concept Art.
-started: 2024-10
-completed: 2025-02
+started: 2024-10-01
+completed: 2025-02-01
 modified:
 hero: images/gaia-plants.png
 project: true
