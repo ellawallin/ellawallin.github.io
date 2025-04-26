@@ -1,5 +1,11 @@
 <footer>
     <div class="footer__content column">
+        {{ with resources.Get "images/decoration-cat.png" }}
+            {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 500) }}
+
+            <img class="footer__decoration" src="{{ $resized.RelPermalink }}" />
+        {{ end }}
+
         <p class="footer__text">© Ella Wallin</p>
     </div>
 </footer>

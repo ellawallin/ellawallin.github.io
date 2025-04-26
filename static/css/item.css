@@ -3,6 +3,8 @@
 .stack {
   list-style-type: none;
   width: 100%;
+  margin-top: var(--spacing-section);
+  margin-bottom: var(--spacing-section);
 }
 
 .stack--project {

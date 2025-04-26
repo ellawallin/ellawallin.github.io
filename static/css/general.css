@@ -16,7 +16,6 @@ body {
 main {
   flex: 1;
   padding: 0;
-  padding-bottom: var(--spacing-small);
 }
 
 header {
@@ -24,9 +23,7 @@ header {
   z-index: 1; /* above hero */
 }
 
-footer {
-  height: var(--height-header);
-}
+footer {}
 
 
 /* || TEXT */
