@@ -4,7 +4,6 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 info: Group project for VFS Animation Concept Art.
 started: 2024-08
 completed: 2024-10
-published:
 modified:
 hero: images/alice-keyart.png
 ---

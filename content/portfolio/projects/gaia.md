@@ -4,9 +4,9 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 info: Final project for VFS Animation Concept Art.
 started: 2024-10
 completed: 2025-02
-published:
 modified:
 hero: images/gaia-plants.png
+project: true
 ---
 
 ![](/images/gaia-keyart-waters.png)
