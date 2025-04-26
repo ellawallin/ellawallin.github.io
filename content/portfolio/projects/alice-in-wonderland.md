@@ -7,7 +7,6 @@ completed: 2024-10
 published:
 modified:
 hero: images/alice-keyart.png
-project: true
 ---
 
 ![](/images/alice-keyart-mushrooms.png)

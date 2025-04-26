@@ -7,7 +7,6 @@ completed: 2025-02
 published:
 modified:
 hero: images/gaia-plants.png
-project: true
 ---
 
 ![](/images/gaia-keyart-waters.png)

@@ -12,7 +12,7 @@
 {{ end }}
 
 {{ range where .RegularPages "Params.hidden" "!=" true }}
-    {{ if .Params.project }}
+    {{ if or $.Params.project .Params.project }}
         {{ $projects = $projects | append . }}
     {{ else }}
         {{ $arts = $arts | append . }}
