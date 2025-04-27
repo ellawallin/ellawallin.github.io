@@ -28,12 +28,11 @@
 }
 
 .hero__title {
+  width: fit-content;
   margin-top: calc(0.5 * var(--height-header));
   margin-bottom: 0;
   text-align: center;
   font-size: var(--font-size-h1-hero);
-  font-family: var(--font-family-special);
-  text-transform: uppercase;
 }
 
 .hero__title--logo {

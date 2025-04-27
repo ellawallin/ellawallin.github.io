@@ -50,6 +50,8 @@ h1 {
   font-size: var(--font-size-h1);
   text-align: center;
   margin-top: var(--spacing-p);
+  font-family: var(--font-family-special);
+  text-transform: uppercase;
 }
 
 h2 {
