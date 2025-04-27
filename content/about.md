@@ -1,7 +1,7 @@
 ---
 title: About me
 hidden: true
-hero: images/gaia-char-turnaround.png
+hero:
 aliases: [aboutme, about-me, me]
 ---
 

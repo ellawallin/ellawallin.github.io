@@ -10,22 +10,27 @@
 
             {{ .Content }}
 
-            {{ $projectsAndArts := partial "fn/GetItemsRecursive" . }}
-            {{ $projects := index $projectsAndArts 0 }}
-            {{ $arts := index $projectsAndArts 1 }}
+            {{ $sectionsAndPages := partial "fn/GetItemsRecursive" . }}
+            {{ $sections := index $sectionsAndPages 0 }}
+            {{ $pages := index $sectionsAndPages 1 }}
 
-            <!-- sections and projects -->
-            {{ with $projects }}
+            <!-- sections -->
+            {{ with $sections }}
                 {{ partial "list/stack_project" . }}
             {{ end }}
 
-            {{ if and $projects $arts }}
+            {{ if and $sections $pages }}
                 <hr>
             {{ end }}
 
-            <!-- arts -->
-            {{ with $arts }}
-                {{ partial "list/stack_art" . }}
+            {{ with $pages }}
+                {{ if eq $.Section "projects" }}
+                    {{ partial "list/stack_project" . }}
+                {{ else if or (eq $.Section "sketches") (eq $.Section "") }}
+                    {{ partial "list/stack_sketch" . }}
+                {{ else }}
+                    {{ errorf (add "List: unknown section " $.Section ) }}
+                {{ end }}
             {{ end }}
         </section>
     </main>

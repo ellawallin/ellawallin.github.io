@@ -1,9 +1,9 @@
 window.onload = () => {
-  var stack = document.querySelector(".stack--art");
+  var stack = document.querySelector(".stack--sketch");
 
   if (stack) {
     let masonry = new Masonry(stack, {
-      itemSelector: ".item--art",
+      itemSelector: ".item--sketch",
       columnWidth: ".grid-sizer",
       gutter: ".gutter-sizer"
     });

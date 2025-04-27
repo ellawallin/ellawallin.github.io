@@ -7,10 +7,4 @@ completed:
 published:
 modified:
 hero:
-thumb:
-weight:
-width:
-aliases: []
-embed:
-hidden:
 ---

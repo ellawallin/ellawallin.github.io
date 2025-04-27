@@ -6,7 +6,6 @@ started: 2024-10-01
 completed: 2025-02-01
 modified:
 hero: images/gaia-plants.png
-project: true
 ---
 
 ![](/images/gaia-keyart-waters.png)
