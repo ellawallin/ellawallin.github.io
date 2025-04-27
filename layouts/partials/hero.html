@@ -18,7 +18,11 @@
         {{ end }}
 
         <div class="hero__overlay">
-            <h1 class="hero__title {{ $classTitle }} inverted column">{{ $.Title }}</h1>
+            {{ if $.Params.herolarge }}
+                <h1 class="hero__title {{ $classTitle }} inverted column">{{ partial "ic/logo.svg" }}</h1>
+            {{ else }}
+                <h1 class="hero__title {{ $classTitle }} inverted column">{{ $.Title }}</h1>
+            {{ end }}
         </div>
     </div>
 {{ end }}

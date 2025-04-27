@@ -37,6 +37,7 @@
 
 .hero__title--logo {
   font-size: var(--font-size-h1-logo);
+  height: 5.5rem;
 }
 
 
