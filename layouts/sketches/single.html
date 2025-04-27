@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+    <main>
+        <article>
+            {{ with .Params.hero }}
+                {{ $image := resources.Get . }}
+
+                {{ with $image }}
+                    {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
+
+                    <div class="hero-detail">
+                        <img class="hero-detail__img fadeload" loading="lazy" onload="this.style.opacity=1" src="{{ $resized.RelPermalink }}">
+                    </div>
+                {{ else }}
+                    {{ errorf (add "Hero: unable to find " .) }}
+                {{ end }}
+            {{ else }}
+                {{ errorf (add "Single: no hero for sketch " .File.Filename) }}
+            {{ end }}
+        </article>
+    </main>
+
+{{ end }}

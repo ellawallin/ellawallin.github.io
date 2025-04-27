@@ -1,6 +1,6 @@
 <header>
     {{ $class := "" }}
-    {{ if .Params.hero }}
+    {{ if and (eq .Section "projects") .Params.hero }}
         {{ $class = "inverted" }}
     {{ end }}
 

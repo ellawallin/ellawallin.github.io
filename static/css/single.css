@@ -37,7 +37,20 @@
 
 .hero__title--logo {
   font-size: var(--font-size-h1-logo);
-  height: 5.5rem;
+}
+
+.hero-detail {
+  width: fit-content;
+  margin: auto;
+}
+
+.hero-detail__img {
+  max-width: calc(100vw - 2 * var(--spacing-small));
+  max-height: calc(100vh - var(--height-header) - var(--spacing-small));
+  margin-bottom: var(--spacing-small);
+  margin-left: var(--spacing-small);
+  margin-right: var(--spacing-small);
+  border-radius: var(--corner-radius);
 }
 
 
