@@ -2,7 +2,7 @@
 title: Ella Wallin
 hero: images/gaia-keyart-waters-full.png
 herolarge: true
-aliases: [/home]
+aliases: [/home, /portfolio]
 ---
 
 {{% split widths="2" %}}

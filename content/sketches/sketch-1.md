@@ -1,3 +1,4 @@
 ---
-hero: images/gaia-props.png
+hero: images/alice-keyart.png
+portfolios: [main]
 ---

@@ -1,3 +1,4 @@
 ---
-hero: images/gaia-plants.png
+hero: images/gaia-keyart-city.png
+portfolios: [main]
 ---

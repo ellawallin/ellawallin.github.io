@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+    <main class="column">
+        <article>
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+
+        {{ range .Site.Taxonomies.portfolios }}
+            {{ partial "it/item_project" .Page }}
+        {{ end }}
+    </main>
+
+{{ end }}

@@ -10,6 +10,7 @@ hero:
 thumb:
 weight:
 width:
+portfolios: []
 aliases: []
 embed:
 hidden:

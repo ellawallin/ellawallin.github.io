@@ -14,6 +14,11 @@
             {{ $sections := index $sectionsAndPages 0 }}
             {{ $pages := index $sectionsAndPages 1 }}
 
+            <!-- homepage featured portfolio content -->
+            {{ if eq $.Section "" }}
+                {{ $pages = $pages | append .Site.Taxonomies.portfolios.main }}
+            {{ end }}
+
             <!-- sections -->
             {{ with $sections }}
                 {{ partial "list/stack_project" . }}
@@ -23,13 +28,12 @@
                 <hr>
             {{ end }}
 
+            <!-- pages -->
             {{ with $pages }}
                 {{ if eq $.Section "projects" }}
                     {{ partial "list/stack_project" . }}
-                {{ else if or (eq $.Section "sketches") (eq $.Section "") }}
-                    {{ partial "list/stack_sketch" . }}
                 {{ else }}
-                    {{ errorf (add "List: unknown section " $.Section ) }}
+                    {{ partial "list/stack_sketch" . }}
                 {{ end }}
             {{ end }}
         </section>
