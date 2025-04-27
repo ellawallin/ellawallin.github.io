@@ -1,5 +1,6 @@
 ---
 title: Ella Wallin
+linktitle: Return Home
 hero: images/gaia-keyart-waters-full.png
 herolarge: true
 aliases: [/home, /portfolio]
