@@ -41,6 +41,10 @@
   font-weight: 500;
 }
 
+.nav-logo {
+  height: var(--height-logo-header);
+}
+
 .nav-tab:hover,
 .nav-tab:active,
 .nav-tab--selected {

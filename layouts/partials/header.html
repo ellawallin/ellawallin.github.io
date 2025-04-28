@@ -8,7 +8,10 @@
 
     <div class="header__content column">
         <div class="header__logo">
-            <a class="nav-tab {{ $class }}" href="/">Ella Wallin</a>
+            <!-- don't show on homepage -->
+            {{ if ne .RelPermalink "/" }}
+                <a class="nav-logo {{ $class }}" href="/">{{ partial "ic/logo.svg" }}</a>
+            {{ end }}
         </div>
 
         <nav class="header__nav">
