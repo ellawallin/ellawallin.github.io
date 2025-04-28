@@ -12,7 +12,7 @@
 
         {{ with $image }}
             {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
-            <img class="hero__img fadeload" loading="lazy" onload="this.style.opacity=1" src="{{ $resized.RelPermalink }}">
+            <img class="hero__img fadeload noselect" loading="lazy" onload="this.style.opacity=1" src="{{ $resized.RelPermalink }}">
         {{ else }}
             {{ errorf (add "Hero: unable to find " .) }}
         {{ end }}
