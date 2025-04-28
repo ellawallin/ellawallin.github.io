@@ -1,0 +1,10 @@
+{{ $image := resources.Get . }}
+{{ $height := -1 }}
+
+{{ with $image }}
+    {{ $height = printf "%.3f" (div (float .Height) .Width) }}
+{{ else }}
+    {{ warnf (add "GetImageRatio: could not find image " .) }}
+{{ end }}
+
+{{ return $height }}
