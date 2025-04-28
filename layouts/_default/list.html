@@ -16,7 +16,9 @@
 
             <!-- homepage featured portfolio content -->
             {{ if eq $.Section "" }}
-                {{ $pages = $pages | append .Site.Taxonomies.portfolios.main }}
+                {{ with .Site.Taxonomies.portfolios.main }}
+                    {{ $pages = $pages | append . }}
+                {{ end }}
             {{ end }}
 
             <!-- sections -->
