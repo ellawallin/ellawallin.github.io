@@ -1,6 +1,6 @@
 ---
 title: Alice in Wonderland
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+summary: A collaborative school project inspired by Alice in Wonderland remix. Each team member was in charge of a specific role and mine was Natural Environment Designer.
 info: Group project for VFS Animation Concept Art.
 started: 2024-08-01
 completed: 2024-10-01

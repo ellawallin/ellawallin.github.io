@@ -1,6 +1,6 @@
 ---
 title: Gaia
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+summary: "In a fantasy world where everyone is born with a gem embedded in their skin, Gaia, born without one, is cast out by society. She embarks on a challenging journey with an unexpected companion to find the mythical source of the gems and finally be accepted. But in searching for who she thought she was meant to be, she discovers something far more valuable: herself."
 info: Final project for VFS Animation Concept Art.
 started: 2024-10-01
 completed: 2025-02-01
