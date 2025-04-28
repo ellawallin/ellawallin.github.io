@@ -1,6 +1,8 @@
 <header>
     {{ $class := "" }}
-    {{ if and (eq .Section "projects") .Params.hero }}
+
+    <!-- overlapping hero -->
+    {{ if and .Params.hero (or (ne .Kind "page") (ne .Section "sketches")) }}
         {{ $class = "inverted" }}
     {{ end }}
 
