@@ -5,7 +5,7 @@ info: Final project for VFS Animation Concept Art.
 started: 2024-10-01
 completed: 2025-02-01
 modified:
-hero: images/gaia-plants.png
+hero: images/gaia-hero.png
 ---
 
 ![](/images/gaia-keyart-waters.png)

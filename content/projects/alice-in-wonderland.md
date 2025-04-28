@@ -5,7 +5,7 @@ info: Group project for VFS Animation Concept Art.
 started: 2024-08-01
 completed: 2024-10-01
 modified:
-hero: images/alice-keyart-garden.png
+hero: images/alice-hero.png
 ---
 
 ![](/images/alice-keyart-mushroom.png)
