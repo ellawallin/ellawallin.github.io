@@ -19,6 +19,8 @@
                 {{ with .Site.Taxonomies.portfolios.main }}
                     {{ $pages = $pages | append . }}
                 {{ end }}
+            {{ else }}
+                {{ $pages = symdiff $pages (where $pages "Params.portfolios" "intersect" (slice "main")) }}
             {{ end }}
 
             <!-- sections -->
