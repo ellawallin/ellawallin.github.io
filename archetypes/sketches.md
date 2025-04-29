@@ -1,6 +1,6 @@
 ---
 hero: images/{{ .File.ContentBaseName }}.png
-completed: {{ substr .File.ContentBaseName 0 4 }}-{{ substr .File.ContentBaseName 4 2 }}-{{ substr .File.ContentBaseName 6 2 }}
+completed: {{ with .File.ContentBaseName }}{{ substr . 0 4 }}-{{ substr . 4 2 }}-{{ substr . 6 2 }}{{ end }}
 height: {{ partial "fn/GetImageRatio" (add "images/" .File.ContentBaseName ".png") }}
 portfolios: []
 ---
