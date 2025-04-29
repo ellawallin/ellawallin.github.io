@@ -8,15 +8,18 @@ modified:
 hero: images/gaia-hero.png
 ---
 
-![](/images/gaia-keyart-waters.png)
-
 ![](/images/gaia-keyart-city.png)
 
 ![](/images/gaia-build-home.png)
 
 {{< split >}}
-    {{< figure src="/images/gaia-char-poses.png" >}}
     {{< figure src="/images/gaia-char-turnaround.png" >}}
+    {{< figure src="/images/gaia-char-poses.png" >}}
+{{< /split >}}
+
+{{< split >}}
+    {{< figure src="/images/gaia-props.png" >}}
+    {{< figure src="/images/gaia-prop-bag.png" >}}
 {{< /split >}}
 
 ![](/images/gaia-char-kotlin.png)
@@ -25,7 +28,6 @@ hero: images/gaia-hero.png
 
 ![](/images/gaia-plants.png)
 
-{{< split >}}
-    {{< figure src="/images/gaia-props.png" >}}
-    {{< figure src="/images/gaia-prop-bag.png" >}}
-{{< /split >}}
+![](/images/gaia-thumbnails.png)
+
+![](/images/gaia-keyart-waters.png)

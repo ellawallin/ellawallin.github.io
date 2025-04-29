@@ -8,14 +8,15 @@ modified:
 hero: images/alice-hero.png
 ---
 
-![](/images/alice-keyart-mushroom.png)
-
 ![](/images/alice-keyart-garden.png)
+
+![](/images/alice-env-garden.png)
 
 ![](/images/alice-plants-garden.png)
 
-![](/images/alice-plants-mushroom.png)
+![](/images/alice-keyart-mushroom.png)
 
 ![](/images/alice-env-mushroom.png)
 
-![](/images/alice-env-garden.png)
+![](/images/alice-plants-mushroom.png)
+
