@@ -14,22 +14,13 @@
             {{ $sections := index $sectionsAndPages 0 }}
             {{ $pages := index $sectionsAndPages 1 }}
 
-            <!-- homepage featured portfolio content -->
-            {{ if eq $.Section "" }}
-                {{ with .Site.Taxonomies.portfolios.main }}
-                    {{ $pages = $pages | append . }}
-                {{ end }}
-            {{ else }}
-                {{ $pages = symdiff $pages (where $pages "Params.portfolios" "intersect" (slice "main")) }}
-            {{ end }}
-
             <!-- sections -->
             {{ with $sections }}
                 {{ partial "list/stack_project" . }}
             {{ end }}
 
             {{ if and $sections $pages }}
-                <hr>
+                <hr />
             {{ end }}
 
             <!-- pages -->
@@ -40,7 +31,15 @@
                     {{ partial "list/stack_sketch" . }}
                 {{ end }}
             {{ end }}
+
+            <!-- homepage featured -->
+            {{ if eq $.Section "" }}
+                {{ $featured := where .RegularPagesRecursive "Params.featured" true }}
+                {{ with $featured }}
+                    <h2>Featured</h2>
+                    {{ partial "list/stack_sketch" . }}
+                {{ end }}
+            {{ end }}
         </section>
     </main>
 {{ end }}
-

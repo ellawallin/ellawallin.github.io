@@ -11,7 +11,7 @@
     {{ end }}
 {{ end }}
 
-{{ range where .RegularPages "Params.hidden" "!=" true }}
+{{ range where (where .RegularPages "Params.hidden" "!=" true) "Params.featured" "!=" true }}
     {{ $pages = $pages | append . }}
 {{ end }}
 

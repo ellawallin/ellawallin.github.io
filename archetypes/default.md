@@ -11,7 +11,7 @@ thumb:
 weight:
 width:
 height:
-portfolios: []
+featured:
 aliases: []
 embed:
 hidden:

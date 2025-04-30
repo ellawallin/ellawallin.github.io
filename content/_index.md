@@ -4,7 +4,7 @@ linktitle: Return Home
 thumb: images/home-thumb.png
 hero: images/home-hero.png
 herolarge: true
-aliases: [/home, /portfolio]
+aliases: [/home, /portfolio, /featured]
 ---
 
 {{% split widths="2" %}}
