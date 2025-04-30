@@ -1,0 +1,7 @@
+{{ $target := "" }}
+
+{{ if not (site.GetPage .Destination) }}
+    {{ $target = "_blank" }}
+{{ end }}
+
+<a class="link" target="{{ $target }}" href="{{ .Destination }}">{{ .PlainText }}</a>

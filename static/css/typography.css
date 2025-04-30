@@ -7,6 +7,22 @@
   color: var(--color-text-primary-inverted);
 }
 
+
+/* || LINK */
+
+.link {
+  text-decoration-color: var(--color-decoration);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.35em;
+  transition: var(--transition);
+}
+
+.link:hover, .link:active {
+  text-decoration-color: var(--color-text-link);
+  text-underline-offset: 0.35em;
+}
+
 /*article > p {
   width: var(--width-column-narrow);
   margin-left: auto;
