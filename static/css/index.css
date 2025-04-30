@@ -41,7 +41,7 @@
 
   --height-header: 4rem;
   --height-logo-home: 5rem;
-  --height-logo-header: 2rem;
+  --height-logo-header: 1.4rem;
   --height-hero: 50vh;
   --height-hero-large: 75vh;
   --height-item-project: 8rem;
@@ -68,7 +68,7 @@
   :root {
     --spacing-header-tabs: 1.2rem;
 
-    --height-logo-header: 1.6rem;
+    --height-logo-header: 1.2rem;
     --height-hero: 36vh;
     --height-hero-large: 67vh;
   }
