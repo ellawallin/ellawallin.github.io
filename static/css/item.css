@@ -76,9 +76,9 @@
   width: 100%;
 }
 
-.item__link:hover > .item__img,
+.item--project__link:hover > .item__img,
 .item--project__link:hover > .item__overlay,
-.item__link:active > .item__img,
+.item--project__link:active > .item__img,
 .item--project__link:active > .item__overlay {
   width: 97%;
   height: 97%;

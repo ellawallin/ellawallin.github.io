@@ -85,6 +85,23 @@
   max-height: 99vh;
   object-fit: cover;
   border-radius: var(--corner-radius);
+  transition: var(--transition);
+}
+
+
+/* || MEDIUM ZOOM */
+
+.medium-zoom-overlay {
+  background: var(--color-bg) !important;
+}
+
+img.medium-zoom-image--opened {
+  border-radius: 0;
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
 }
 
 

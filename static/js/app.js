@@ -1,9 +1,7 @@
-window.onload = () => {
+function loadMasonry() {
   var stack = document.querySelector(".stack--sketch");
 
   if (stack) {
-    console.log("loading masonry ...");
-
     let masonry = new Masonry(stack, {
       itemSelector: ".item--sketch",
       columnWidth: ".grid-sizer",
@@ -12,11 +10,21 @@ window.onload = () => {
 
     // layout after each image loads
     masonry.on("layoutComplete", function() {
-      console.log("masonry layout complete");
-
       stack.style.opacity = 1;
     });
 
     masonry.layout();
   }
+}
+
+function loadMediumZoom() {
+  let zoom = mediumZoom(".zoomable", {
+    margin: 0,
+    scrollOffset: 40
+  });
+}
+
+window.onload = () => {
+  loadMasonry();
+  loadMediumZoom();
 };

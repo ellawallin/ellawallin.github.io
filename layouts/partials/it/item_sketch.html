@@ -1,4 +1,4 @@
-<article class="item item--sketch {{ if page.IsHome }}item--sketch--home{{ end }}">
+<article class="item item--sketch{{ if page.IsHome }} item--sketch--home{{ end }}">
     {{ $thumb := "" }}
     {{ $style := "" }}
 
@@ -12,13 +12,13 @@
         {{ $style = add "aspect-ratio: 1 / " (string .) }}
     {{ end }}
 
-    <a class="item__link item--sketch__link" style="{{ safe.CSS $style }}" href="{{ .RelPermalink }}">
+    <a class="item__link item--sketch__link" style="{{ safe.CSS $style }}">
         {{ with $thumb }}
             {{ $image := resources.Get . }}
 
             {{ with $image }}
-                {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
-                <img class="item__img item--sketch__img" loading="lazy" src="{{ $resized.RelPermalink }}">
+                {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
+                <img class="item__img item--sketch__img zoomable" loading="lazy" src="{{ $resized.RelPermalink }}">
             {{ else }}
                 {{ errorf (add "Item: unable to find " .) }}
             {{ end }}

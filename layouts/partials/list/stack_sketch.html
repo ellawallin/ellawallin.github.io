@@ -1,5 +1,5 @@
 <div class="stack stack--sketch fadeload">
-    <div class="grid-sizer {{ if page.IsHome }}grid-sizer--home{{ end }}"></div>
+    <div class="grid-sizer{{ if page.IsHome }} grid-sizer--home{{ end }}"></div>
     <div class="gutter-sizer"></div>
 
     {{ range where . "Params.hidden" "!=" true }}

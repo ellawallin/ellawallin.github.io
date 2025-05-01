@@ -1,5 +1,5 @@
 {{ with resources.Get (.Get "src") }}
-    {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1500) }}
+    {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
 
     <figure>
         {{ partial "single/image_figure" (dict
