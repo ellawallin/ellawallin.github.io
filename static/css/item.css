@@ -15,6 +15,7 @@
 }
 
 .stack--sketch {
+  /*grid-template-columns: repeat(3, minmax(0, 1fr));*/
 }
 
 .gutter-sizer {
@@ -27,7 +28,7 @@
   }
 
   .stack--sketch {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
   }
 
   .item--project {
@@ -49,6 +50,10 @@
 
 .item--sketch, .grid-sizer {
   width: calc(1/3 * 100% - 2/3 * var(--spacing-stack));
+}
+
+.item--sketch--home, .grid-sizer--home {
+  width: calc(50% - 0.5 * var(--spacing-stack));
 }
 
 .item--sketch {
@@ -127,5 +132,9 @@
 @media screen and (max-width: 42rem) {
   .item--sketch, .grid-sizer {
     width: calc(50% - 0.5 * var(--spacing-stack));
+  }
+
+  .item--sketch--home, .grid-sizer--home {
+    width: 100%;
   }
 }

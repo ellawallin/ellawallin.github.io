@@ -33,7 +33,7 @@
             {{ end }}
 
             <!-- homepage featured -->
-            {{ if eq $.Section "" }}
+            {{ if page.IsHome }}
                 {{ $featured := where .RegularPagesRecursive "Params.featured" true }}
                 {{ with $featured }}
                     <h2>Featured</h2>
