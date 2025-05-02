@@ -9,7 +9,7 @@ function loadMasonry() {
     });
 
     // layout after each image loads
-    masonry.on("layoutComplete", function() {
+    masonry.on("layoutComplete", () => {
       stack.style.opacity = 1;
     });
 
@@ -20,7 +20,8 @@ function loadMasonry() {
 function loadMediumZoom() {
   let zoom = mediumZoom(".zoomable", {
     margin: 0,
-    scrollOffset: 40
+    scrollOffset: 20,
+    container: "#zoom-container"
   });
 }
 

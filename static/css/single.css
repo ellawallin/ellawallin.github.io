@@ -104,6 +104,18 @@ img.medium-zoom-image--opened {
   z-index: 999;
 }
 
+#zoom-container {
+  position: fixed;
+  inset: var(--spacing-small);
+  visibility: hidden;
+}
+
+@media screen and (max-width: 64rem) {
+  #zoom-container {
+    inset: 0;
+  }
+}
+
 
 /* || SPLIT */
 
