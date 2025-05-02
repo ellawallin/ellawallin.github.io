@@ -17,8 +17,14 @@
             {{ $image := resources.Get . }}
 
             {{ with $image }}
-                {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
-                <img class="item__img item--sketch__img zoomable" loading="lazy" src="{{ $resized.RelPermalink }}">
+                {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
+                {{ $resizedZoom := partial "fn/ResizeSmart" (dict "image" . "length" 2000) }}
+
+                <img
+                    class="item__img item--sketch__img zoomable"
+                    loading="lazy"
+                    src="{{ $resized.RelPermalink }}"
+                    data-zoom-src="{{ $resizedZoom.RelPermalink }}" />
             {{ else }}
                 {{ errorf (add "Item: unable to find " .) }}
             {{ end }}
