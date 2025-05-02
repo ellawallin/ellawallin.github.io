@@ -23,7 +23,9 @@ header {
   z-index: 1; /* above hero */
 }
 
-footer {}
+footer {
+  padding-bottom: var(--spacing-small);
+}
 
 
 /* || TEXT */

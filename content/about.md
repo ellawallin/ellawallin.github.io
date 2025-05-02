@@ -13,13 +13,3 @@ aliases: [aboutme, about-me, me]
     Thanks for stopping by!
 </p>
 {{< /split >}}
-
-{{% split widths="2" %}}
-
-## Contact
-
-ella.ml.wallin@gmail.com\
-[linkedin.com/in/ella-wallin](https://linkedin.com/in/ella-wallin)\
-[instagram.com/ella.wallin](https://instagram.com/ella.wallin)
-
-{{% /split %}}

@@ -6,6 +6,12 @@
             <img class="footer__decoration" src="{{ $resized.RelPermalink }}" />
         {{ end }}
 
-        <p class="footer__text">© Ella Wallin | <a class="link" href="/about">Contact</a></p>
+        <div class="footer__socials">
+            {{ partial "social" (dict "icon" "mail" "link" "mailto:ella.ml.wallin@gmail.com" ) }}
+            {{ partial "social" (dict "icon" "linkedin" "link" "https://linkedin.com/in/ella-wallin" ) }}
+            {{ partial "social" (dict "icon" "instagram" "link" "https://instagram.com/ella.wallin" ) }}
+        </div>
+
+        <p class="footer__text">© Ella Wallin</p>
     </div>
 </footer>

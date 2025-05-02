@@ -67,8 +67,33 @@
 
 .footer__text, .footer__text > * {
   margin: 0;
-  margin-bottom: var(--spacing-small);
   text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.footer__socials {
+  display: flex;
+  gap: var(--spacing-tiny);
+}
+
+.social-circle {
+  background-color: var(--color-surface);
+  border-radius: 1.5rem;
+  width: 42px;
+  height: 42px;
+}
+
+.social-circle > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-circle svg {
+  width: 24px;
+  height: 24px;
   color: var(--color-text-secondary);
 }
 
@@ -78,6 +103,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-tiny);
 }
 
 .footer__decoration {
