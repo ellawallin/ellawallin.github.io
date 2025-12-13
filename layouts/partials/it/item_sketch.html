@@ -12,20 +12,27 @@
         {{ $style = add "aspect-ratio: 1 / " (string .) }}
     {{ end }}
 
-    <a class="item__link item--sketch__link" style="{{ safe.CSS $style }}" href="{{ .RelPermalink }}">
-        {{ with $thumb }}
-            {{ $image := resources.Get . }}
+    {{ with $thumb }}
+        {{ $image := resources.Get . }}
+        {{ with $image }}
+            {{ $fullResized := partial "fn/ResizeSmart" (dict "image" . "length" 3000) }}
 
-            {{ with $image }}
-                {{ $resized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
+            <a
+                class="item__link item--sketch__link"
+                style="{{ safe.CSS $style }}"
+                href="{{ $fullResized.RelPermalink }}"
+                data-pswp-width="{{ $fullResized.Width }}"
+                data-pswp-height="{{ $fullResized.Height }}">
+
+                {{ $thumbResized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
 
                 <img
                     class="item__img item--sketch__img"
                     loading="lazy"
-                    src="{{ $resized.RelPermalink }}" />
-            {{ else }}
-                {{ errorf (add "Item: unable to find " .) }}
-            {{ end }}
+                    src="{{ $thumbResized.RelPermalink }}" />
+            </a>
+        {{ else }}
+            {{ errorf (add "Item: unable to find " .) }}
         {{ end }}
-    </a>
+    {{ end }}
 </article>

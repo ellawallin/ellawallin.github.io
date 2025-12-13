@@ -22,6 +22,11 @@
         {{ else }}
             <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
         {{ end }}
+
+        <!-- scripts -->
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+        <script src="{{ "js/app.js" | absURL }}" type="module"></script>
     </head>
 
     <body>
@@ -29,10 +34,5 @@
         {{ block "main" . }}
         {{ end }}
         {{ partial "footer" . }}
-
-        <!-- scripts -->
-        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-        <script src="{{ "js/app.js" | absURL }}"></script>
     </body>
 </html>

@@ -4,6 +4,7 @@
 @import "item.css";
 @import "single.css";
 @import "utilities.css";
+@import "photoswipe/photoswipe.css";
 
 :root {
   /* color */
