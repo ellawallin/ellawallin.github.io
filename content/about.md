@@ -7,7 +7,7 @@ project: true
 ---
 
 {{< split widths="2" section=true >}}
-    {{< figure src="/images/about-portrait.png" zoomable=false >}}
+    {{< figure src="/images/about-portrait.png">}}
     {{% div %}}
 
 Hi, I’m Ella Wallin, a Swedish concept artist with a love for nature. I specialize in environments, and I love creating spaces that feel alive, emotional and a little bit magical.

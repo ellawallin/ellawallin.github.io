@@ -17,15 +17,6 @@ function loadMasonry() {
   }
 }
 
-function loadMediumZoom() {
-  let zoom = mediumZoom(".zoomable", {
-    margin: 0,
-    scrollOffset: 30,
-    container: "#zoom-container"
-  });
-}
-
 window.onload = () => {
   loadMasonry();
-  loadMediumZoom();
 };

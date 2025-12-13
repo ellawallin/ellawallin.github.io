@@ -89,34 +89,6 @@
 }
 
 
-/* || MEDIUM ZOOM */
-
-.medium-zoom-overlay {
-  background: var(--color-bg-overlay) !important;
-}
-
-img.medium-zoom-image--opened {
-  border-radius: 0;
-}
-
-.medium-zoom-overlay,
-.medium-zoom-image--opened {
-  z-index: 999;
-}
-
-#zoom-container {
-  position: fixed;
-  inset: var(--spacing-small);
-  visibility: hidden;
-}
-
-@media screen and (max-width: 64rem) {
-  #zoom-container {
-    inset: 0;
-  }
-}
-
-
 /* || SPLIT */
 
 .split {

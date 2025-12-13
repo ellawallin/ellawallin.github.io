@@ -1,10 +1,8 @@
 {{ $resized := partial "fn/ResizeSmart" (dict "image" .src "length" 1500) }}
-{{ $resizedZoom := partial "fn/ResizeSmart" (dict "image" .src "length" 2000) }}
 
 <img
-    class="figure__img{{ if not (eq .zoomable false) }} zoomable{{ end }}{{ if .outline }} outlined{{ end }}"
+    class="figure__img{{ if .outline }} outlined{{ end }}"
     src="{{ $resized.RelPermalink }}"
-    data-zoom-src="{{ $resizedZoom.RelPermalink }}"
 
     {{ with .alt }}
         alt="{{ . }}"
