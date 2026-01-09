@@ -37,6 +37,31 @@
 }
 
 
+/* || PHOTOSWIPE */
+
+.pswp__counter {
+  font-size: var(--font-size-caption);
+}
+
+.pswp__icn {
+  /* use stroke for custom icons instead of shadow */
+  stroke: var(--pswp-icon-stroke-color);
+}
+
+
+.pswp__button.pswp__hide-on-close .pswp__icn {
+  /* fix arrow icons not changing opacity on hover */
+  opacity: 0.85;
+}
+
+.pswp__button.pswp__hide-on-close:hover .pswp__icn,
+.pswp__button.pswp__hide-on-close:active .pswp__icn,
+.pswp__button.pswp__hide-on-close:focus .pswp__icn {
+  /* fix arrow icons not changing opacity on hover */
+  opacity: 1;
+}
+
+
 /* || ITEM */
 
 .item {
