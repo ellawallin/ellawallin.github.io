@@ -8,14 +8,11 @@
         {{ warnf (add "Item: " .Params.title " has no hero" ) }}
     {{ end }}
 
-    {{ with .Params.height }}
-        {{ $style = add "aspect-ratio: 1 / " (string .) }}
-    {{ end }}
-
     {{ with $thumb }}
         {{ $image := resources.Get . }}
         {{ with $image }}
             {{ $fullResized := partial "fn/ResizeSmart" (dict "image" . "length" 3000) }}
+            {{ $style = add "aspect-ratio: " (printf "%.3f" (div (float .Width) .Height)) }}
 
             <a
                 class="item__link item--sketch__link"
