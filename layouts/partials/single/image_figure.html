@@ -1,14 +1,22 @@
+{{ $fullResized := partial "fn/ResizeSmart" (dict "image" .src "length" 3000) }}
 {{ $resized := partial "fn/ResizeSmart" (dict "image" .src "length" 1500) }}
 
-<img
-    class="figure__img{{ if .outline }} outlined{{ end }}"
-    src="{{ $resized.RelPermalink }}"
+<a
+    class="figure__link"
+    href="{{ $fullResized.RelPermalink }}"
+    data-pswp-width="{{ $fullResized.Width }}"
+    data-pswp-height="{{ $fullResized.Height }}">
 
-    {{ with .alt }}
-        alt="{{ . }}"
-    {{ end }}
+    <img
+        class="figure__img{{ if .outline }} outlined{{ end }}"
+        src="{{ $resized.RelPermalink }}"
 
-    {{ with .title }}
-        title="{{ . }}"
-    {{ end }}
-/>
+        {{ with .alt }}
+            alt="{{ . }}"
+        {{ end }}
+
+        {{ with .title }}
+            title="{{ . }}"
+        {{ end }}
+    />
+</a>
