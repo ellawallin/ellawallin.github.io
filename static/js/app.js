@@ -2,11 +2,11 @@ import PhotoSwipe from "./photoswipe/photoswipe.esm.min.js";
 import PhotoSwipeLightbox from "./photoswipe/photoswipe-lightbox.esm.min.js";
 
 function loadMasonry() {
-  const stack = document.querySelector(".stack--sketch");
+  const stack = document.querySelector(".stack--standalone");
 
   if (stack) {
     const masonry = new Masonry(stack, {
-      itemSelector: ".item--sketch",
+      itemSelector: ".item--standalone",
       columnWidth: ".grid-sizer",
       gutter: ".gutter-sizer"
     });
@@ -25,8 +25,8 @@ function loadPhotoSwipe() {
   const icLeft = '<svg aria-hidden="true" class="pswp__icn" width="60" height="60" viewBox="0 0 60 60"><path d="M18.7042 20.7041C19.4202 19.9881 20.5801 19.9881 21.296 20.7041C22.0119 21.4201 22.0119 22.58 21.296 23.2959L14.5919 30L21.296 36.7041C22.0119 37.4201 22.0119 38.58 21.296 39.2959C20.5801 40.0118 19.4202 40.0118 18.7042 39.2959L10.7042 31.2959C9.98826 30.5799 9.98826 29.4201 10.7042 28.7041L18.7042 20.7041Z" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const lightbox = new PhotoSwipeLightbox({
-    gallery: ".stack--sketch, .article--project",
-    children: ".item--sketch, .figure__link",
+    gallery: ".stack--standalone, .article--project",
+    children: ".item--standalone, .figure__link",
     pswpModule: PhotoSwipe,
     loop: false,
     zoom: false,

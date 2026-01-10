@@ -25,7 +25,7 @@
 
             <!-- images -->
             {{ with $images }}
-                {{ partial "list/stack_sketch" . }}
+                {{ partial "list/stack_standalone" . }}
             {{ end }}
 
             <!-- homepage featured -->
@@ -33,7 +33,7 @@
                 {{ $featured := where .RegularPagesRecursive "Params.featured" true }}
                 {{ with $featured }}
                     <h2>Featured</h2>
-                    {{ partial "list/stack_sketch" . }}
+                    {{ partial "list/stack_standalone" . }}
                 {{ end }}
             {{ end }}
         </section>

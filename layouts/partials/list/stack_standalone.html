@@ -1,8 +1,8 @@
-<div class="stack stack--sketch fadeload">
+<div class="stack stack--standalone fadeload">
     <div class="grid-sizer{{ if page.IsHome }} grid-sizer--home{{ end }}"></div>
     <div class="gutter-sizer"></div>
 
     {{ range where . "Params.hidden" "!=" true }}
-        {{ partial "it/item_sketch" . }}
+        {{ partial "it/item_standalone" . }}
     {{ end }}
 </div>

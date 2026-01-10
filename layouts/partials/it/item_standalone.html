@@ -1,4 +1,4 @@
-<article class="item item--sketch{{ if page.IsHome }} item--sketch--home{{ end }}">
+<article class="item item--standalone{{ if page.IsHome }} item--standalone--home{{ end }}">
     {{ $thumb := "" }}
     {{ $style := "" }}
 
@@ -15,7 +15,7 @@
             {{ $style = add "aspect-ratio: " (printf "%.3f" (div (float .Width) .Height)) }}
 
             <a
-                class="item__link item--sketch__link"
+                class="item__link item--standalone__link"
                 style="{{ safe.CSS $style }}"
                 href="{{ $fullResized.RelPermalink }}"
                 data-pswp-width="{{ $fullResized.Width }}"
@@ -24,7 +24,7 @@
                 {{ $thumbResized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
 
                 <img
-                    class="item__img item--sketch__img"
+                    class="item__img item--standalone__img"
                     loading="lazy"
                     src="{{ $thumbResized.RelPermalink }}" />
             </a>
