@@ -101,6 +101,8 @@
   width: 100%;
 }
 
+.item--sketch__link:hover > .item__img,
+.item--sketch__link:active > .item__img,
 .item--project__link:hover > .item__img,
 .item--project__link:hover > .item__overlay,
 .item--project__link:active > .item__img,
