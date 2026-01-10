@@ -15,13 +15,9 @@
         </div>
 
         <nav class="header__nav">
-            {{ range .Site.Sections }}
-                {{ if .RegularPagesRecursive }}
-                    {{ partial "header_tab" (dict "link" .RelPermalink "text" .LinkTitle "class" (add $class " nav-tab--hidable") ) }}
-                {{ end }}
+            {{ range site.Menus.main }}
+                {{ partial "header_tab" (dict "link" .URL "text" .Name "class" (add $class " nav-tab--hidable") ) }}
             {{ end }}
-
-            {{ partial "header_tab" (dict "link" "/about/" "text" "About" "class" $class ) }}
         </nav>
     </div>
 </header>

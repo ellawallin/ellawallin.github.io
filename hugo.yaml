@@ -1,6 +1,6 @@
 baseURL: https://ellawallin.github.io/
-languageCode: en-us
 title: Ella Wallin
+languageCode: en-us
 timeout: 300s
 markup:
   goldmark:
@@ -14,3 +14,24 @@ frontmatter:
     - completed
     - started
     - :default
+sectionPagesMenu: main
+menus:
+  main:
+    - name: About
+      pageRef: /about
+  social:
+    - name: Mail
+      params:
+        icon: mail
+      url: mailto:ella.ml.wallin@gmail.com
+      weight: 1
+    - name: LinkedIn
+      params:
+        icon: linkedin
+      url: https://linkedin.com/in/ella-wallin
+      weight: 2
+    - name: Instagram
+      params:
+        icon: instagram
+      url: https://instagram.com/ella.wallin
+      weight: 3
