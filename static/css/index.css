@@ -29,7 +29,7 @@
 
   --spacing-p: 1rem;
   --spacing-section: 2rem;
-  --spacing-column: var(--spacing-small);
+  --spacing-edge: var(--spacing-small);
   --spacing-stack: var(--spacing-tiny);
   --spacing-header-tabs: 1.5rem;
 
@@ -72,7 +72,6 @@
   :root {
     --spacing-header-tabs: 1.2rem;
 
-    --height-logo-header: 1.2rem;
     --height-hero-large: 67vh;
   }
 }

@@ -1,4 +1,4 @@
-<header>
+<header class="column">
     {{ $class := "" }}
 
     <!-- overlapping hero -->
@@ -6,18 +6,24 @@
         {{ $class = "inverted" }}
     {{ end }}
 
-    <div class="header__content column">
-        <div class="header__logo">
-            <!-- don't show on homepage -->
-            {{ if ne .RelPermalink "/" }}
-                <a class="nav-logo {{ $class }}" href="/">{{ partial "ic/logo-small.svg" }}</a>
-            {{ end }}
+    <nav class="header__nav">
+        <div class="header__nav__top">
+            <input id="header__nav__top__toggle" type="checkbox">
+
+            <label class="header__nav__top__label nav-btn nav-btn--label {{ $class }}" for="header__nav__top__toggle">
+                {{ partial "ic/menu.svg" }}
+                {{ partial "ic/x.svg" }}
+            </label>
+
+            <div class="header__nav__top__logo">
+                <a class="nav-logo {{ $class }}{{ if eq .RelPermalink "/" }} nav-logo--homepage{{ end }}" href="/">{{ partial "ic/logo-small.svg" }}</a>
+            </div>
         </div>
 
-        <nav class="header__nav">
+        <div class="header__nav__tabs">
             {{ range site.Menus.main }}
-                {{ partial "header_tab" (dict "link" .URL "text" .Name "class" (add $class " nav-tab--hidable") ) }}
+                {{ partial "header_tab" (dict "link" .URL "text" .Name "class" $class) }}
             {{ end }}
-        </nav>
-    </div>
+        </div>
+    </nav>
 </header>

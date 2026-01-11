@@ -1,8 +1,8 @@
-{{ $class := "nav-tab" }}
+{{ $class := "nav-btn nav-btn--tab" }}
 
 <!-- highlight selected tab -->
 {{ if strings.Contains page.RelPermalink .link }}
-    {{ $class = "nav-tab nav-tab--selected" }}
+    {{ $class = "nav-btn nav-btn--tab nav-btn--selected" }}
 {{ end }}
 
 <a href="{{ .link }}" class="{{ .class }} {{ $class }}">{{ .text }}</a>

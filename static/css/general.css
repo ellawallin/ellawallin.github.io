@@ -18,11 +18,6 @@ main {
   padding: 0;
 }
 
-header {
-  height: var(--height-header);
-  z-index: 1; /* above hero */
-}
-
 footer {
   padding-bottom: var(--spacing-small);
 }
