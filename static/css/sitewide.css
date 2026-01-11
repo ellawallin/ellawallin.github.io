@@ -131,7 +131,6 @@ header {
   #header__nav__top__toggle:checked ~ .header__nav__top__logo > .nav-logo--homepage {
     display: block;
   }
-}
 
   #header__nav__top__toggle:checked ~ .header__nav__top__label.inverted {
     /* invert inversion */
