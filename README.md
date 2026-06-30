@@ -2,7 +2,7 @@
 
 Portfolio website for illustrator and concept artist Ella Wallin. View it at [ellawallin.se](https://ellawallin.se/).
 
-All content and assets are copyright © Ella Wallin.
+All content and assets are copyright © Ella Wallin, except where stated otherwise.
 
 ## Tech
 

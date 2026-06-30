@@ -11,6 +11,6 @@ aliases: [/home, /portfolio, /featured]
 
 ## Illustrator & Concept Artist
 
-Hi, I’m Ella Wallin, a Swedish concept artist with a love for nature. I specialize in environments, and I love creating spaces that feel alive, emotional and a little bit magical. Email: ella.ml.wallin@gmail.com
+Ella is a Swedish illustrator who loves to create colorful and whimsical illustrations, inspired by nature and with charming animal and kid characters. Email: ella.ml.wallin@gmail.com
 
 {{% /split %}}
