@@ -1,0 +1,14 @@
+{{ $resized := partial "fn/ResizeSmart" (dict "image" .src "length" 1500) }}
+
+<img
+    class="figure__img{{ if .outline }} outlined{{ end }}"
+    src="{{ $resized.RelPermalink }}"
+
+    {{ with .alt }}
+        alt="{{ . }}"
+    {{ end }}
+
+    {{ with .title }}
+        title="{{ . }}"
+    {{ end }}
+/>

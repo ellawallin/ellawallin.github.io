@@ -1,22 +1,14 @@
 {{ $fullResized := partial "fn/ResizeSmart" (dict "image" .src "length" 3000) }}
-{{ $resized := partial "fn/ResizeSmart" (dict "image" .src "length" 1500) }}
 
-<a
-    class="figure__link"
-    href="{{ $fullResized.RelPermalink }}"
-    data-pswp-width="{{ $fullResized.Width }}"
-    data-pswp-height="{{ $fullResized.Height }}">
+{{ if ne .zoomable false }}
+    <a
+        class="figure__link"
+        href="{{ $fullResized.RelPermalink }}"
+        data-pswp-width="{{ $fullResized.Width }}"
+        data-pswp-height="{{ $fullResized.Height }}">
 
-    <img
-        class="figure__img{{ if .outline }} outlined{{ end }}"
-        src="{{ $resized.RelPermalink }}"
-
-        {{ with .alt }}
-            alt="{{ . }}"
-        {{ end }}
-
-        {{ with .title }}
-            title="{{ . }}"
-        {{ end }}
-    />
-</a>
+        {{ partial "single/image_figure_simple" (dict "src" .src "alt" .alt "title" .title "outline" .outline) }}
+    </a>
+{{ else }}
+    {{ partial "single/image_figure_simple" (dict "src" .src "alt" .alt "title" .title "outline" .outline) }}
+{{ end }}

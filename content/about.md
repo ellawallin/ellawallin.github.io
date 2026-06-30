@@ -7,7 +7,7 @@ project: true
 ---
 
 {{< split widths="2" section=true >}}
-    {{< figure src="/images/about-portrait.png">}}
+    {{< figure src="/images/about-portrait.png" zoomable=false >}}
     {{% div %}}
 
 At the ripe age of nine, Ella picked up a pen and started telling people she was going to become an illustrator, and since then she has drawn her way through life. She has tried everything from realistic portraits and minimalist watercolor paintings to animation and concept art. But it wasn’t until she tried illustrating children’s artwork that everything started to fall into place and she finally felt at home. Now, Ella creates colorful and whimsical illustrations, inspired by nature and with funny and charming animal and kid characters.

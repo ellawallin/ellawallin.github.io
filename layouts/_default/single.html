@@ -1,9 +1,9 @@
 {{ define "main" }}
 
     {{ if .Params.project }}
-        {{ partial "single/single-project" . }}
+        {{ partial "single/single_project" . }}
     {{ else }}
-        {{ partial "single/single-image" . }}
+        {{ partial "single/single_standalone" . }}
     {{ end }}
 
 {{ end }}
