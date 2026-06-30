@@ -39,6 +39,8 @@
   --width-column-narrow: calc(var(--width-column-wide) * 2/3); /* 4/6 */
   --width-column-1: calc(var(--width-column-wide) / 6); /* 1/6 */
   --width-mobile: 42rem;
+  --width-border: 0.08em;
+  --width-border-large: 0.2em;
 
   --height-header: 4rem;
   --height-logo-home: 5rem;

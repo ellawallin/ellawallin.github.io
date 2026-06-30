@@ -1,6 +1,6 @@
 .outlined {
-  outline: var(--width-border) solid var(--color-border);
-  outline-offset: -0.085rem;
+  outline: var(--width-border) solid var(--color-decoration);
+  outline-offset: calc(-1 * var(--width-border));
 }
 
 .bulletless {

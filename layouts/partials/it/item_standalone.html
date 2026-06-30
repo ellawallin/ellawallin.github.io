@@ -24,7 +24,7 @@
                 {{ $thumbResized := partial "fn/ResizeSmart" (dict "image" . "length" 1000) }}
 
                 <img
-                    class="item__img item--standalone__img"
+                    class="item__img item--standalone__img{{ if $.Params.outline }} outlined{{ end }}"
                     loading="lazy"
                     src="{{ $thumbResized.RelPermalink }}" />
             </a>
