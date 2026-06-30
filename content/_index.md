@@ -2,7 +2,7 @@
 title: Ella Wallin
 linktitle: Return Home
 thumb: images/home-thumb.png
-hero: images/home-hero.png
+hero: images/20260303-sigtuna.png
 herolarge: true
 aliases: [/home, /portfolio, /featured]
 ---
